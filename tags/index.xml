@@ -1,337 +1,337 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on The LIFE</title>
-    <link>/tags/</link>
-    <description>Recent content in Tags on The LIFE</description>
+    <title>Tags on Minimal</title>
+    <link>http://example.com/tags/</link>
+    <description>Recent content in Tags on Minimal</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>en-us</language>
     <lastBuildDate>Sun, 24 Sep 2017 19:29:28 +0000</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ai</title>
-      <link>/tags/ai/</link>
+      <link>http://example.com/tags/ai/</link>
       <pubDate>Sun, 24 Sep 2017 19:29:28 +0000</pubDate>
       
-      <guid>/tags/ai/</guid>
+      <guid>http://example.com/tags/ai/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Api</title>
-      <link>/tags/api/</link>
+      <link>http://example.com/tags/api/</link>
       <pubDate>Tue, 08 Aug 2017 12:11:10 +0000</pubDate>
       
-      <guid>/tags/api/</guid>
+      <guid>http://example.com/tags/api/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Arch</title>
-      <link>/tags/arch/</link>
+      <link>http://example.com/tags/arch/</link>
       <pubDate>Thu, 28 Sep 2017 19:48:52 +0000</pubDate>
       
-      <guid>/tags/arch/</guid>
+      <guid>http://example.com/tags/arch/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Blog</title>
-      <link>/tags/blog/</link>
+      <link>http://example.com/tags/blog/</link>
       <pubDate>Tue, 08 Aug 2017 09:11:10 +0000</pubDate>
       
-      <guid>/tags/blog/</guid>
+      <guid>http://example.com/tags/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Book</title>
-      <link>/tags/book/</link>
+      <link>http://example.com/tags/book/</link>
       <pubDate>Sun, 24 Mar 2019 13:57:37 +0000</pubDate>
       
-      <guid>/tags/book/</guid>
+      <guid>http://example.com/tags/book/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Childhood</title>
-      <link>/tags/childhood/</link>
+      <link>http://example.com/tags/childhood/</link>
       <pubDate>Fri, 27 Jul 2018 21:56:20 +0000</pubDate>
       
-      <guid>/tags/childhood/</guid>
+      <guid>http://example.com/tags/childhood/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Clusters</title>
-      <link>/tags/clusters/</link>
+      <link>http://example.com/tags/clusters/</link>
       <pubDate>Tue, 08 Aug 2017 16:18:09 +0000</pubDate>
       
-      <guid>/tags/clusters/</guid>
+      <guid>http://example.com/tags/clusters/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Compiler</title>
-      <link>/tags/compiler/</link>
+      <link>http://example.com/tags/compiler/</link>
       <pubDate>Sun, 20 Aug 2017 20:57:17 +0000</pubDate>
       
-      <guid>/tags/compiler/</guid>
+      <guid>http://example.com/tags/compiler/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Configure</title>
-      <link>/tags/configure/</link>
+      <link>http://example.com/tags/configure/</link>
       <pubDate>Thu, 26 Oct 2017 13:30:18 +0000</pubDate>
       
-      <guid>/tags/configure/</guid>
+      <guid>http://example.com/tags/configure/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cs</title>
-      <link>/tags/cs/</link>
+      <link>http://example.com/tags/cs/</link>
       <pubDate>Wed, 07 Mar 2018 13:57:37 +0000</pubDate>
       
-      <guid>/tags/cs/</guid>
+      <guid>http://example.com/tags/cs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data Visualization</title>
-      <link>/tags/data-visualization/</link>
+      <link>http://example.com/tags/data-visualization/</link>
       <pubDate>Wed, 11 Oct 2017 18:53:34 +0000</pubDate>
       
-      <guid>/tags/data-visualization/</guid>
+      <guid>http://example.com/tags/data-visualization/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Database</title>
-      <link>/tags/database/</link>
+      <link>http://example.com/tags/database/</link>
       <pubDate>Thu, 26 Oct 2017 13:30:18 +0000</pubDate>
       
-      <guid>/tags/database/</guid>
+      <guid>http://example.com/tags/database/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dip</title>
-      <link>/tags/dip/</link>
+      <link>http://example.com/tags/dip/</link>
       <pubDate>Wed, 13 Sep 2017 20:49:32 +0000</pubDate>
       
-      <guid>/tags/dip/</guid>
+      <guid>http://example.com/tags/dip/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Distrubuted System</title>
-      <link>/tags/distrubuted-system/</link>
+      <link>http://example.com/tags/distrubuted-system/</link>
       <pubDate>Thu, 30 Aug 2018 20:00:00 +0000</pubDate>
       
-      <guid>/tags/distrubuted-system/</guid>
+      <guid>http://example.com/tags/distrubuted-system/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dns</title>
-      <link>/tags/dns/</link>
+      <link>http://example.com/tags/dns/</link>
       <pubDate>Sat, 11 Nov 2017 09:40:04 +0000</pubDate>
       
-      <guid>/tags/dns/</guid>
+      <guid>http://example.com/tags/dns/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fp</title>
-      <link>/tags/fp/</link>
+      <link>http://example.com/tags/fp/</link>
       <pubDate>Wed, 07 Feb 2018 14:27:31 +0000</pubDate>
       
-      <guid>/tags/fp/</guid>
+      <guid>http://example.com/tags/fp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Future</title>
-      <link>/tags/future/</link>
+      <link>http://example.com/tags/future/</link>
       <pubDate>Mon, 31 Dec 2018 16:18:37 +0000</pubDate>
       
-      <guid>/tags/future/</guid>
+      <guid>http://example.com/tags/future/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Graduate</title>
-      <link>/tags/graduate/</link>
+      <link>http://example.com/tags/graduate/</link>
       <pubDate>Mon, 31 Dec 2018 16:18:37 +0000</pubDate>
       
-      <guid>/tags/graduate/</guid>
+      <guid>http://example.com/tags/graduate/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hadoop</title>
-      <link>/tags/hadoop/</link>
+      <link>http://example.com/tags/hadoop/</link>
       <pubDate>Fri, 20 Apr 2018 16:13:59 +0000</pubDate>
       
-      <guid>/tags/hadoop/</guid>
+      <guid>http://example.com/tags/hadoop/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ideal</title>
-      <link>/tags/ideal/</link>
+      <link>http://example.com/tags/ideal/</link>
       <pubDate>Fri, 11 Aug 2017 23:43:14 +0000</pubDate>
       
-      <guid>/tags/ideal/</guid>
+      <guid>http://example.com/tags/ideal/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ieee</title>
-      <link>/tags/ieee/</link>
+      <link>http://example.com/tags/ieee/</link>
       <pubDate>Tue, 26 Dec 2017 22:03:46 +0000</pubDate>
       
-      <guid>/tags/ieee/</guid>
+      <guid>http://example.com/tags/ieee/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Job</title>
-      <link>/tags/job/</link>
+      <link>http://example.com/tags/job/</link>
       <pubDate>Mon, 31 Dec 2018 16:18:37 +0000</pubDate>
       
-      <guid>/tags/job/</guid>
+      <guid>http://example.com/tags/job/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Js</title>
-      <link>/tags/js/</link>
+      <link>http://example.com/tags/js/</link>
       <pubDate>Wed, 07 Feb 2018 14:27:31 +0000</pubDate>
       
-      <guid>/tags/js/</guid>
+      <guid>http://example.com/tags/js/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Life</title>
-      <link>/tags/life/</link>
+      <link>http://example.com/tags/life/</link>
       <pubDate>Mon, 31 Dec 2018 16:18:37 +0000</pubDate>
       
-      <guid>/tags/life/</guid>
+      <guid>http://example.com/tags/life/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linear Algebra</title>
-      <link>/tags/linear-algebra/</link>
+      <link>http://example.com/tags/linear-algebra/</link>
       <pubDate>Fri, 08 Sep 2017 21:50:19 +0000</pubDate>
       
-      <guid>/tags/linear-algebra/</guid>
+      <guid>http://example.com/tags/linear-algebra/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lua</title>
-      <link>/tags/lua/</link>
+      <link>http://example.com/tags/lua/</link>
       <pubDate>Sun, 24 Mar 2019 13:57:37 +0000</pubDate>
       
-      <guid>/tags/lua/</guid>
+      <guid>http://example.com/tags/lua/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ml</title>
-      <link>/tags/ml/</link>
+      <link>http://example.com/tags/ml/</link>
       <pubDate>Sun, 24 Sep 2017 19:29:28 +0000</pubDate>
       
-      <guid>/tags/ml/</guid>
+      <guid>http://example.com/tags/ml/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mysql</title>
-      <link>/tags/mysql/</link>
+      <link>http://example.com/tags/mysql/</link>
       <pubDate>Thu, 26 Oct 2017 13:30:18 +0000</pubDate>
       
-      <guid>/tags/mysql/</guid>
+      <guid>http://example.com/tags/mysql/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Network</title>
-      <link>/tags/network/</link>
+      <link>http://example.com/tags/network/</link>
       <pubDate>Tue, 26 Dec 2017 22:03:46 +0000</pubDate>
       
-      <guid>/tags/network/</guid>
+      <guid>http://example.com/tags/network/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Os</title>
-      <link>/tags/os/</link>
+      <link>http://example.com/tags/os/</link>
       <pubDate>Sun, 20 Aug 2017 20:57:17 +0000</pubDate>
       
-      <guid>/tags/os/</guid>
+      <guid>http://example.com/tags/os/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Paper</title>
-      <link>/tags/paper/</link>
+      <link>http://example.com/tags/paper/</link>
       <pubDate>Wed, 11 Oct 2017 18:53:34 +0000</pubDate>
       
-      <guid>/tags/paper/</guid>
+      <guid>http://example.com/tags/paper/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Primer</title>
-      <link>/tags/primer/</link>
+      <link>http://example.com/tags/primer/</link>
       <pubDate>Tue, 08 Aug 2017 09:11:10 +0000</pubDate>
       
-      <guid>/tags/primer/</guid>
+      <guid>http://example.com/tags/primer/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Redis</title>
-      <link>/tags/redis/</link>
+      <link>http://example.com/tags/redis/</link>
       <pubDate>Fri, 08 Sep 2017 21:50:19 +0000</pubDate>
       
-      <guid>/tags/redis/</guid>
+      <guid>http://example.com/tags/redis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Rust</title>
-      <link>/tags/rust/</link>
+      <link>http://example.com/tags/rust/</link>
       <pubDate>Sun, 24 Mar 2019 13:57:37 +0000</pubDate>
       
-      <guid>/tags/rust/</guid>
+      <guid>http://example.com/tags/rust/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tcp/Ip</title>
-      <link>/tags/tcp-ip/</link>
+      <link>http://example.com/tags/tcp-ip/</link>
       <pubDate>Fri, 08 Sep 2017 21:50:19 +0000</pubDate>
       
-      <guid>/tags/tcp-ip/</guid>
+      <guid>http://example.com/tags/tcp-ip/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Web</title>
-      <link>/tags/web/</link>
+      <link>http://example.com/tags/web/</link>
       <pubDate>Tue, 08 Aug 2017 12:11:10 +0000</pubDate>
       
-      <guid>/tags/web/</guid>
+      <guid>http://example.com/tags/web/</guid>
       <description></description>
     </item>
     

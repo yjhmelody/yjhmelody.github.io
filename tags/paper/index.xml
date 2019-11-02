@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Paper on The LIFE</title>
-    <link>/tags/paper/</link>
-    <description>Recent content in Paper on The LIFE</description>
+    <title>Paper on Minimal</title>
+    <link>http://example.com/tags/paper/</link>
+    <description>Recent content in Paper on Minimal</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>en-us</language>
     <lastBuildDate>Wed, 11 Oct 2017 18:53:34 +0000</lastBuildDate>
     
-	<atom:link href="/tags/paper/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://example.com/tags/paper/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>VAET阅读稿</title>
-      <link>/blog/posts/vaet%E9%98%85%E8%AF%BB%E7%A8%BF/</link>
+      <link>http://example.com/blog/posts/vaet%E9%98%85%E8%AF%BB%E7%A8%BF/</link>
       <pubDate>Wed, 11 Oct 2017 18:53:34 +0000</pubDate>
       
-      <guid>/blog/posts/vaet%E9%98%85%E8%AF%BB%E7%A8%BF/</guid>
+      <guid>http://example.com/blog/posts/vaet%E9%98%85%E8%AF%BB%E7%A8%BF/</guid>
       <description>VAET: A Visual Analytics Approach for E-transactions Time-Series 电子交易时间序列的一种可视化分析方法  Cong Xie, Wei Chen, Member, IEEE, Xinxin Huang, Yueqi Hu, Scott Barlowe, and Jing Yang
  创新实践的论文阅读作业，翻译了主要内容，加上部分自己的理解并修改部分内容，保留了部分原文，有时候阅读原文更好理解。全文按照论文组织的方式编写，主要是为了理清楚论文的主要思想，并可以简单地给其他人做宏观上的解释，达到基本的教学目的。此文将作为ppt的前稿。
 INTRODUCTION 介绍 The E-transaction time-series contains transactions among multiple users in a time range. Each record contains a time stamp, the IDs of the seller and buyer, and the associated attributes of the commodities. Each record is an atomic element representing an online transaction among a seller and a buyer.</description>
