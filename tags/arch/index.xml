@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Arch on The LIFE</title>
-    <link>yjhmelody.github.io/tags/arch/</link>
+    <link>/tags/arch/</link>
     <description>Recent content in Arch on The LIFE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 28 Sep 2017 19:48:52 +0000</lastBuildDate>
     
-	<atom:link href="yjhmelody.github.io/tags/arch/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/arch/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>计算机系统结构</title>
-      <link>yjhmelody.github.io/blog/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84/</link>
+      <link>/blog/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84/</link>
       <pubDate>Thu, 28 Sep 2017 19:48:52 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/blog/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84/</guid>
+      <guid>/blog/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84/</guid>
       <description>系统结构的部分课后作业，因为需要写成电子版，故稍微整理下也放入到博客中，方便你我他。答案是自己组织的，不保证一定正确。 书是张晨曦的《计算机系统结构（第2版）》
 第一章 1 翻译技术是先把 L+1 级程序全部变换成 L 级程序后，再去执行新产生的 L 级程序，在执行过程中 L+1 级程序不再被访问。
 解释技术是每当一条 L+1 级指令被译码后，就直接去执行一串等效的 L 级指令，然后再去取下一条 L+1 级指令，以此重复进行。

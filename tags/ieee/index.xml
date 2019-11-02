@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ieee on The LIFE</title>
-    <link>yjhmelody.github.io/tags/ieee/</link>
+    <link>/tags/ieee/</link>
     <description>Recent content in Ieee on The LIFE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 26 Dec 2017 22:03:46 +0000</lastBuildDate>
     
-	<atom:link href="yjhmelody.github.io/tags/ieee/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/ieee/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>IEEE802.11概述</title>
-      <link>yjhmelody.github.io/blog/posts/ieee802.11%E6%97%A0%E7%BA%BFlans%E6%A6%82%E8%BF%B0/</link>
+      <link>/blog/posts/ieee802.11%E6%97%A0%E7%BA%BFlans%E6%A6%82%E8%BF%B0/</link>
       <pubDate>Tue, 26 Dec 2017 22:03:46 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/blog/posts/ieee802.11%E6%97%A0%E7%BA%BFlans%E6%A6%82%E8%BF%B0/</guid>
+      <guid>/blog/posts/ieee802.11%E6%97%A0%E7%BA%BFlans%E6%A6%82%E8%BF%B0/</guid>
       <description>IEEE 802.11无线 LANs 概述 无线链路和网络特征 802.11协议簇是国际电工电子工程学会（IEEE）为无线局域网络制定的标准。虽然WI-FI使用了802.11的媒体访问数据链路层（DLL）和物理层（PHY），但是两者并不完全一致。
 这里主要概述了 802.11无线LAN的特征。不过首先应该关注的是无线网络与有线网络的区别。
 当我们寻找有线和无线网络的重要区别时，应该重点关注链路层，我们确实可以发现有线链路和无线链路有许多重要区别：

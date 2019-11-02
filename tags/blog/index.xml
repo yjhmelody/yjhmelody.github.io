@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on The LIFE</title>
-    <link>yjhmelody.github.io/tags/blog/</link>
+    <link>/tags/blog/</link>
     <description>Recent content in Blog on The LIFE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 08 Aug 2017 09:11:10 +0000</lastBuildDate>
     
-	<atom:link href="yjhmelody.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>欢迎，刚搭建好的博客</title>
-      <link>yjhmelody.github.io/blog/posts/%E6%AC%A2%E8%BF%8E%E5%88%9A%E6%90%AD%E5%BB%BA%E5%A5%BD%E7%9A%84%E5%8D%9A%E5%AE%A2/</link>
+      <link>/blog/posts/%E6%AC%A2%E8%BF%8E%E5%88%9A%E6%90%AD%E5%BB%BA%E5%A5%BD%E7%9A%84%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Tue, 08 Aug 2017 09:11:10 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/blog/posts/%E6%AC%A2%E8%BF%8E%E5%88%9A%E6%90%AD%E5%BB%BA%E5%A5%BD%E7%9A%84%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>/blog/posts/%E6%AC%A2%E8%BF%8E%E5%88%9A%E6%90%AD%E5%BB%BA%E5%A5%BD%E7%9A%84%E5%8D%9A%E5%AE%A2/</guid>
       <description>分享知识与见解 博客搭建的过程 照理说用hexo搭建博客是一分钟的事情，结果我花了6小时，其中绝大部分时间花在了主题上面，想找个能写数学公式的主题不容易啊，又要符合自己的审美，而且文档要齐全没有bug。 最后找到了这个，但是文档还是不够详解，有些功能不知道如何使用，但暂且将就下吧。这个主题自带了mathjax，不过我还没有测试过能不能写公式，我现在就来测试
 $ (\frac{1}{2})^2 = \frac{1}{4} $
 顺便测试下代码效果吧

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rust on The LIFE</title>
-    <link>yjhmelody.github.io/tags/rust/</link>
+    <link>/tags/rust/</link>
     <description>Recent content in Rust on The LIFE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 24 Mar 2019 13:57:37 +0000</lastBuildDate>
     
-	<atom:link href="yjhmelody.github.io/tags/rust/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/rust/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>实现Lua-AST</title>
-      <link>yjhmelody.github.io/blog/posts/implement-lua-ast/</link>
+      <link>/blog/posts/implement-lua-ast/</link>
       <pubDate>Sun, 24 Mar 2019 13:57:37 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/blog/posts/implement-lua-ast/</guid>
+      <guid>/blog/posts/implement-lua-ast/</guid>
       <description>实现Lua解释器-AST 调研 最近终于开始做毕设了，于是开始考虑是否用一款语法分析生成器来写Lua前端，遂发现Pest, 一款Rust的语法分析器，使用PEG文法。这个文法有点像BNF和正则的融合，但是定义无歧义，表达能力小于等于CFG。写起来比较舒服，考虑到Lua官方文法整理出来有许多左递归文法，改写很麻烦（我不太会），虽然Pest本身编写很友好，但是感觉文档描述有点少，有些关键的地方使用不清楚，加上没有IDE的代码提示，遂放弃（不过写一些小语言的简单文法以后可以考虑）。之前用过Nom这款解析组合子库，这个库性能非常好，但是我觉得语法设计的非常怪异，之前用也没搞清楚，对于之前编写的某个玩具虚拟机的字节码编译器使用起来也是小题大做，反而搞复杂了。
 于是乎，还是打算手写。考虑到Lua本身文法少，手写代码量不会多上几百行；自己之前也没有实现一个比较满意的解析器；如果用语法生成生成器，首先还得学，然后得花时间改写文法，有点得不偿失。
 词法 首先随便写了点词法这块，发现我抽象能力太弱了，本来想多用第三方库实现更抽象性能更好的词法分析类，但我有点不太熟悉泛型编程，而且前期具体工作不明确，写了很大概率后面要改。于是乎，就是很粗糙地使用了String类型。而对于具体的词法分析，感觉写过很多次，每次套路都写的不一样，参考别人的实现，也都是五花八门，我也没法判断哪种够优雅。而对于Lua语言，毕竟是工业级语言，词法分析实现细节一定要参考书或官方文档，语法细节非常多。

@@ -2,336 +2,336 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on The LIFE</title>
-    <link>yjhmelody.github.io/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on The LIFE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 24 Sep 2017 19:29:28 +0000</lastBuildDate>
     
-	<atom:link href="yjhmelody.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ai</title>
-      <link>yjhmelody.github.io/tags/ai/</link>
+      <link>/tags/ai/</link>
       <pubDate>Sun, 24 Sep 2017 19:29:28 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/ai/</guid>
+      <guid>/tags/ai/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Api</title>
-      <link>yjhmelody.github.io/tags/api/</link>
+      <link>/tags/api/</link>
       <pubDate>Tue, 08 Aug 2017 12:11:10 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/api/</guid>
+      <guid>/tags/api/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Arch</title>
-      <link>yjhmelody.github.io/tags/arch/</link>
+      <link>/tags/arch/</link>
       <pubDate>Thu, 28 Sep 2017 19:48:52 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/arch/</guid>
+      <guid>/tags/arch/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Blog</title>
-      <link>yjhmelody.github.io/tags/blog/</link>
+      <link>/tags/blog/</link>
       <pubDate>Tue, 08 Aug 2017 09:11:10 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/blog/</guid>
+      <guid>/tags/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Book</title>
-      <link>yjhmelody.github.io/tags/book/</link>
+      <link>/tags/book/</link>
       <pubDate>Sun, 24 Mar 2019 13:57:37 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/book/</guid>
+      <guid>/tags/book/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Childhood</title>
-      <link>yjhmelody.github.io/tags/childhood/</link>
+      <link>/tags/childhood/</link>
       <pubDate>Fri, 27 Jul 2018 21:56:20 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/childhood/</guid>
+      <guid>/tags/childhood/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Clusters</title>
-      <link>yjhmelody.github.io/tags/clusters/</link>
+      <link>/tags/clusters/</link>
       <pubDate>Tue, 08 Aug 2017 16:18:09 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/clusters/</guid>
+      <guid>/tags/clusters/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Compiler</title>
-      <link>yjhmelody.github.io/tags/compiler/</link>
+      <link>/tags/compiler/</link>
       <pubDate>Sun, 20 Aug 2017 20:57:17 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/compiler/</guid>
+      <guid>/tags/compiler/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Configure</title>
-      <link>yjhmelody.github.io/tags/configure/</link>
+      <link>/tags/configure/</link>
       <pubDate>Thu, 26 Oct 2017 13:30:18 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/configure/</guid>
+      <guid>/tags/configure/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cs</title>
-      <link>yjhmelody.github.io/tags/cs/</link>
+      <link>/tags/cs/</link>
       <pubDate>Wed, 07 Mar 2018 13:57:37 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/cs/</guid>
+      <guid>/tags/cs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data Visualization</title>
-      <link>yjhmelody.github.io/tags/data-visualization/</link>
+      <link>/tags/data-visualization/</link>
       <pubDate>Wed, 11 Oct 2017 18:53:34 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/data-visualization/</guid>
+      <guid>/tags/data-visualization/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Database</title>
-      <link>yjhmelody.github.io/tags/database/</link>
+      <link>/tags/database/</link>
       <pubDate>Thu, 26 Oct 2017 13:30:18 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/database/</guid>
+      <guid>/tags/database/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dip</title>
-      <link>yjhmelody.github.io/tags/dip/</link>
+      <link>/tags/dip/</link>
       <pubDate>Wed, 13 Sep 2017 20:49:32 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/dip/</guid>
+      <guid>/tags/dip/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Distrubuted System</title>
-      <link>yjhmelody.github.io/tags/distrubuted-system/</link>
+      <link>/tags/distrubuted-system/</link>
       <pubDate>Thu, 30 Aug 2018 20:00:00 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/distrubuted-system/</guid>
+      <guid>/tags/distrubuted-system/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dns</title>
-      <link>yjhmelody.github.io/tags/dns/</link>
+      <link>/tags/dns/</link>
       <pubDate>Sat, 11 Nov 2017 09:40:04 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/dns/</guid>
+      <guid>/tags/dns/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fp</title>
-      <link>yjhmelody.github.io/tags/fp/</link>
+      <link>/tags/fp/</link>
       <pubDate>Wed, 07 Feb 2018 14:27:31 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/fp/</guid>
+      <guid>/tags/fp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Future</title>
-      <link>yjhmelody.github.io/tags/future/</link>
+      <link>/tags/future/</link>
       <pubDate>Mon, 31 Dec 2018 16:18:37 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/future/</guid>
+      <guid>/tags/future/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Graduate</title>
-      <link>yjhmelody.github.io/tags/graduate/</link>
+      <link>/tags/graduate/</link>
       <pubDate>Mon, 31 Dec 2018 16:18:37 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/graduate/</guid>
+      <guid>/tags/graduate/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hadoop</title>
-      <link>yjhmelody.github.io/tags/hadoop/</link>
+      <link>/tags/hadoop/</link>
       <pubDate>Fri, 20 Apr 2018 16:13:59 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/hadoop/</guid>
+      <guid>/tags/hadoop/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ideal</title>
-      <link>yjhmelody.github.io/tags/ideal/</link>
+      <link>/tags/ideal/</link>
       <pubDate>Fri, 11 Aug 2017 23:43:14 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/ideal/</guid>
+      <guid>/tags/ideal/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ieee</title>
-      <link>yjhmelody.github.io/tags/ieee/</link>
+      <link>/tags/ieee/</link>
       <pubDate>Tue, 26 Dec 2017 22:03:46 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/ieee/</guid>
+      <guid>/tags/ieee/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Job</title>
-      <link>yjhmelody.github.io/tags/job/</link>
+      <link>/tags/job/</link>
       <pubDate>Mon, 31 Dec 2018 16:18:37 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/job/</guid>
+      <guid>/tags/job/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Js</title>
-      <link>yjhmelody.github.io/tags/js/</link>
+      <link>/tags/js/</link>
       <pubDate>Wed, 07 Feb 2018 14:27:31 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/js/</guid>
+      <guid>/tags/js/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Life</title>
-      <link>yjhmelody.github.io/tags/life/</link>
+      <link>/tags/life/</link>
       <pubDate>Mon, 31 Dec 2018 16:18:37 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/life/</guid>
+      <guid>/tags/life/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linear Algebra</title>
-      <link>yjhmelody.github.io/tags/linear-algebra/</link>
+      <link>/tags/linear-algebra/</link>
       <pubDate>Fri, 08 Sep 2017 21:50:19 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/linear-algebra/</guid>
+      <guid>/tags/linear-algebra/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lua</title>
-      <link>yjhmelody.github.io/tags/lua/</link>
+      <link>/tags/lua/</link>
       <pubDate>Sun, 24 Mar 2019 13:57:37 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/lua/</guid>
+      <guid>/tags/lua/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ml</title>
-      <link>yjhmelody.github.io/tags/ml/</link>
+      <link>/tags/ml/</link>
       <pubDate>Sun, 24 Sep 2017 19:29:28 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/ml/</guid>
+      <guid>/tags/ml/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mysql</title>
-      <link>yjhmelody.github.io/tags/mysql/</link>
+      <link>/tags/mysql/</link>
       <pubDate>Thu, 26 Oct 2017 13:30:18 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/mysql/</guid>
+      <guid>/tags/mysql/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Network</title>
-      <link>yjhmelody.github.io/tags/network/</link>
+      <link>/tags/network/</link>
       <pubDate>Tue, 26 Dec 2017 22:03:46 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/network/</guid>
+      <guid>/tags/network/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Os</title>
-      <link>yjhmelody.github.io/tags/os/</link>
+      <link>/tags/os/</link>
       <pubDate>Sun, 20 Aug 2017 20:57:17 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/os/</guid>
+      <guid>/tags/os/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Paper</title>
-      <link>yjhmelody.github.io/tags/paper/</link>
+      <link>/tags/paper/</link>
       <pubDate>Wed, 11 Oct 2017 18:53:34 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/paper/</guid>
+      <guid>/tags/paper/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Primer</title>
-      <link>yjhmelody.github.io/tags/primer/</link>
+      <link>/tags/primer/</link>
       <pubDate>Tue, 08 Aug 2017 09:11:10 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/primer/</guid>
+      <guid>/tags/primer/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Redis</title>
-      <link>yjhmelody.github.io/tags/redis/</link>
+      <link>/tags/redis/</link>
       <pubDate>Fri, 08 Sep 2017 21:50:19 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/redis/</guid>
+      <guid>/tags/redis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Rust</title>
-      <link>yjhmelody.github.io/tags/rust/</link>
+      <link>/tags/rust/</link>
       <pubDate>Sun, 24 Mar 2019 13:57:37 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/rust/</guid>
+      <guid>/tags/rust/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tcp/Ip</title>
-      <link>yjhmelody.github.io/tags/tcp-ip/</link>
+      <link>/tags/tcp-ip/</link>
       <pubDate>Fri, 08 Sep 2017 21:50:19 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/tcp-ip/</guid>
+      <guid>/tags/tcp-ip/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Web</title>
-      <link>yjhmelody.github.io/tags/web/</link>
+      <link>/tags/web/</link>
       <pubDate>Tue, 08 Aug 2017 12:11:10 +0000</pubDate>
       
-      <guid>yjhmelody.github.io/tags/web/</guid>
+      <guid>/tags/web/</guid>
       <description></description>
     </item>
     
