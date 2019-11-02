@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Job on Minimal</title>
-    <link>/tags/job/</link>
+    <link>https://yjhmelody.github.io/tags/job/</link>
     <description>Recent content in Job on Minimal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 31 Dec 2018 16:18:37 +0000</lastBuildDate>
     
-	<atom:link href="/tags/job/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://yjhmelody.github.io/tags/job/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>2018年总结和未来展望</title>
-      <link>/blog/posts/2018%E5%B9%B4%E6%80%BB%E7%BB%93%E5%92%8C%E6%9C%AA%E6%9D%A5%E5%B1%95%E6%9C%9B/</link>
+      <link>https://yjhmelody.github.io/blog/posts/2018%E5%B9%B4%E6%80%BB%E7%BB%93%E5%92%8C%E6%9C%AA%E6%9D%A5%E5%B1%95%E6%9C%9B/</link>
       <pubDate>Mon, 31 Dec 2018 16:18:37 +0000</pubDate>
       
-      <guid>/blog/posts/2018%E5%B9%B4%E6%80%BB%E7%BB%93%E5%92%8C%E6%9C%AA%E6%9D%A5%E5%B1%95%E6%9C%9B/</guid>
+      <guid>https://yjhmelody.github.io/blog/posts/2018%E5%B9%B4%E6%80%BB%E7%BB%93%E5%92%8C%E6%9C%AA%E6%9D%A5%E5%B1%95%E6%9C%9B/</guid>
       <description>昨天是我的公历生日，本作为总结2018这年的大好日子，可惜拖延症犯了，把博客一些地方小改一下就作罢了。
 考研迷思 虽然备考途中，多次心情波动，懒癌和睡眠等问题，几乎要放弃考研了，甚至有次备考资料丢失，还是多亏周围的同学对我的鼓励和支持，最后也算勉勉强强上道了。 最后几天几乎也没法提升水平了，只好不停地看错题，记忆一些生僻的公式，翻翻书把近几年不常考的知识点也巩固下。那时候想着，只要好好发挥，不要再在计算上犯错就应该能够达成目标。
 考研前到考研结束的那10天，几乎是我最放松的几天。这让想起来了高考，最后一个月也是这般，因为清楚的认识到自己的能力和短期的可能性，变得不会盲目地学习，而是以考研也是生活中的一部分这样的处事态度来度过。所以我每天照样追番，照样看其他感兴趣的领域知识，我觉得人生不过如此了。如果把目光聚焦于当前，“考研失败”，“失业”，“感染疾病”，“单身一辈子”，“没有朋友”等这些人们口中常道的事物都让我不觉得可怕。
@@ -33,10 +33,10 @@
     
     <item>
       <title>关于未来方向学习的思考</title>
-      <link>/blog/posts/%E5%85%B3%E4%BA%8E%E6%9C%AA%E6%9D%A5%E6%96%B9%E5%90%91%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%80%9D%E8%80%83/</link>
+      <link>https://yjhmelody.github.io/blog/posts/%E5%85%B3%E4%BA%8E%E6%9C%AA%E6%9D%A5%E6%96%B9%E5%90%91%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%80%9D%E8%80%83/</link>
       <pubDate>Fri, 11 Aug 2017 23:43:14 +0000</pubDate>
       
-      <guid>/blog/posts/%E5%85%B3%E4%BA%8E%E6%9C%AA%E6%9D%A5%E6%96%B9%E5%90%91%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%80%9D%E8%80%83/</guid>
+      <guid>https://yjhmelody.github.io/blog/posts/%E5%85%B3%E4%BA%8E%E6%9C%AA%E6%9D%A5%E6%96%B9%E5%90%91%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%80%9D%E8%80%83/</guid>
       <description>总结现状 如今 今天是周五，等会就周六了。虽然平时经常忙活在电脑前，但好像没在做什么特别有意义的事情，看到github一个好项目就想着去看它的源码，然后呢，迫于水平不够，一堆工具也掌握的不利索，怎么也没法开始学。其实大概是自己内心不知道以后到底想去做什么吧。其实2，3w行的代码如果搞懂它的流程，而且又熟悉相关语言并懂得一些相关方向的知识，应该是可以开始看了，起码不应该想到看就害怕而退缩，这连第一步都没有走呢。
 想法 比较坚定的想法呢是以后做编译相关工作，这个工作岗位很少，要求也很高，许多大神高中就开始接触了。我呢，现在还半吊子，最近才开始理解了最基本的知识，将来如果要考研，这应该是计算机体系结构这个方向的研究生吧。而这2个月一直在学机器学习，但我只是对它的原理好奇，又想着机器学习方向能跟数学打交道，又能锻炼算法能力，便很欣然地参加了这次暑假集训。最近这个月有些忙坏了，但又觉得自己学到知识很少，可能是太贪心了吧，自己对计算机许多方向都感兴趣，但未曾深入其中一个。我还经常跟同学说那句话：不要总想着以后要干嘛，你现在在干嘛，以后很可能就在干嘛，所以要干嘛就赶紧现在就开始干。其实我自己也没有做到我所说，虽然我非常希望自己能做到。
 兴趣 最近查阅了一些资料，其实都是自己以前都看过，只是很多不少都忘记了或者没有重视起来。记得大一时候对C++兴趣特别浓厚，买了C++primer和STL源码剖析，还很认真看过（但没怎么敲代码），后来接触了的其他编程语言，C++也基本没有使用过了。现在要是还记得大一C++要求的内容就不错咯。
