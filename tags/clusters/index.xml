@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Clusters on The LIFE</title>
+    <link>yjhmelody.github.io/tags/clusters/</link>
+    <description>Recent content in Clusters on The LIFE</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 08 Aug 2017 16:18:09 +0000</lastBuildDate>
+    
+	<atom:link href="yjhmelody.github.io/tags/clusters/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>k-means</title>
+      <link>yjhmelody.github.io/blog/posts/k-means/</link>
+      <pubDate>Tue, 08 Aug 2017 16:18:09 +0000</pubDate>
+      
+      <guid>yjhmelody.github.io/blog/posts/k-means/</guid>
+      <description>公式排版目前没法解决唉，博客写个数学公式怎么这么揪心，好不容易解决了公式显示问题，但排版又很难控制
+k-means 基本原理 这个星期学无监督学习(unsuperviser-learning), 最基本的是k-means算法. k-means属于原型聚类:假设聚类结构能通过一组原型刻画. 而聚类本身是根据数据相似度来划分的,即&amp;rdquo;距离&amp;rdquo;.我这里不展开讲距离计算, 姑且用欧几里德距离来理解，即平时最常见的公式. {% raw %}
+我们先写出k-means的最小化平方误差: 给定样本集合 $D = {x_1, x_2, \dots, x_m}$,
+k-means对聚类所得的簇划分 $C = {C_1, C_2, \dots, Ck}$ 的最小平方误差是 $E = \sum{i=1}^k \sum_{x \in C_i} ||x - \mu_i||_2^2 $,
+其中 $\mu_i = \frac{1}{|Ci|} \sum{x \in C_i}x$是簇$ C_i $ 的均值向量 {% endraw %}
+可以看出来, 求该式子的最优解并不容易, 因为需要考察每个样本可能的划分情况(NP难问题), 所以k-means 采用贪心策略, 通过迭代优化求近似解.
+感觉学完以上内容, 脑子里好像有了这个算法的轮廓了, 但仔细一想, 还有很多地方需要斟酌. k-means是划分为k个类别, 那一开始怎么划分呢? 我们想到一开始需要选k个样本当作中心点来计算距离, 根据这k个位置就求得每个样本离哪个位置最接近. 这样,第一次聚类就完成了, 但是由于这次聚类造成每个类别的中心点发生了偏移,
+我们需要重新计算这时候的中心点,而由于发生了偏移,我们又需要重新计算所有样本最接近的&amp;hellip; 如何反复,直到中心点(即均值向量)不变, 便完成了聚类.</description>
+    </item>
+    
+  </channel>
+</rss>

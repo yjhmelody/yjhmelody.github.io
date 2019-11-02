@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Distrubuted System on The LIFE</title>
+    <link>yjhmelody.github.io/tags/distrubuted-system/</link>
+    <description>Recent content in Distrubuted System on The LIFE</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 30 Aug 2018 20:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="yjhmelody.github.io/tags/distrubuted-system/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>《DDIA》概念整理</title>
+      <link>yjhmelody.github.io/blog/posts/ddia%E6%A6%82%E5%BF%B5%E6%95%B4%E7%90%86/</link>
+      <pubDate>Thu, 30 Aug 2018 20:00:00 +0000</pubDate>
+      
+      <guid>yjhmelody.github.io/blog/posts/ddia%E6%A6%82%E5%BF%B5%E6%95%B4%E7%90%86/</guid>
+      <description>最近指忙里抽闲的看《Designing Data-Intensive Applications》（《设计数据密集型应用》）这本书，主要书看中文为主。这本书非常好，我现在刚看完一半。这本书让你认识到了数据库系统和分布式系统的大概貌，没有深入繁琐的具体细节也没有让人浅尝辄止。这本书网络上评价很高，甚至豆瓣评分有2个评分，一个是9.5分，一个是10分。现在即使想作为一个普通的后端工程师也需要学习分布式知识了，强烈推荐这本书。
+我发现书后面的术语表非常精良，个人认为：虽然可能还涵盖不到一半的核心概念，但是如果能深刻的理解这术语表部分的，那对数据库系统和分布式系统就有了比较好的整体认识了。
+顺便，光看这本书就需要接触过数据结构，操作系统，计算机网络，数据库原理，还有少部分组成原理的知识，不然只能知其然不知其所以然。限于自己的个人水平和这方面不多的实践，有些部分还没有理解到位。个人认为，学习分布式可能还需要学习一点并行编程和网络编程，分布式系统可能是综合性比较强的方向了。并且根据具体要做的分布式系统，可能还需要机器学习，搜索引擎等知识。
+这本书配合着学习 MIT6.824 可能会非常好吧。
+以下整理出了英文和中文的术语表。
+英文 asynchronous Not waiting for something to complete (e.g., sending data over the network to another node), and not making any assumptions about how long it is going to take. See Synchronous Versus Asynchronous Replication on page 153, Synchronous Versus Asynchronous Networks on page 284, and System Model and Reality on page 306.
+atomic  In the context of concurrent operations:describing an operation that appears to take effect at a single point in time, so another concurrent process can never encounter the operation in a halffinished state.</description>
+    </item>
+    
+  </channel>
+</rss>

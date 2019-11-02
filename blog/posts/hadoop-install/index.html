@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hadoop Install</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Fira Code', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: orange;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="yjhmelody.github.io/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira%20Code">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.53" />
+        
+
+        
+
+        
+            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+        
+
+    </head>
+
+    <body>
+        
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Hadoop Install</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="yjhmelody.github.io/">Home</a></li>
+                            
+                                <li><a href="yjhmelody.github.io/about/">About</a></li>
+                            
+                                <li><a href="yjhmelody.github.io/blog/">Posts</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:465402634@qq.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/yjhmelody/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/yjhmelody/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.douban.com/people/yjhmelody/"><i class="fa fa-douban"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    <div>
+        <h2>Hadoop Install</h2>
+        <h5></h5>
+        
+<a href="yjhmelody.github.iotags/hadoop"><kbd class="item-tag">Hadoop</kbd></a>
+
+
+    </div>
+
+    <div align="start" class="content">
+
+<h1 id="hadoop-install">Hadoop Install</h1>
+
+<p>我采用的是 linux 下的 hadoop 安装，本安装文档说明前提是已经全局安装了<code>open-jdk1.8</code>(也可以使用 hotspot jdk)。本文档主要参考官方文档。部分英文由自己补充和改写，主要内容翻译为中文。</p>
+
+<p>Required software for Linux include:</p>
+
+<p>Java™ must be installed. Recommended Java versions are described at HadoopJavaVersions.</p>
+
+<p>ssh must be installed and sshd must be running to use the Hadoop scripts that manage remote Hadoop daemons.</p>
+
+<!-- more -->
+
+<h2 id="installing-software">Installing Software</h2>
+
+<p>以下是必需的软件。</p>
+
+<pre><code>$ sudo apt-get install ssh
+$ sudo apt-get install rsync
+</code></pre>
+
+<h2 id="download">Download</h2>
+
+<p>To get a Hadoop distribution, download a recent stable release from one of the Apache Download <a href="http://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-2.7.6/hadoop-2.7.6.tar.gz">Mirrors</a>.</p>
+
+<p>For global using, move the hadoop software to <code>~/software</code>.
+Before start hadoop, we should check the <code>etc/profile</code> and <code>~/.bashrc</code> coded with the following code.
+These are my personal config about Java and basic hadoop config.
+For hadoop, <code>HADOOP_HOME</code> must to be set firstly.</p>
+
+<p>我使用的是 hadoop2.7.5 版本。到官网下载后，解压，并把主目录移动到了<code>~/software</code>下，并且改名为了hadoop。
+然后需要配置一些最基本的环境变量，<code>etc/profile</code>，<code>~/.bashrc</code>配置一些全局变量，我这里包括java的基本配置。如果与读者不一致，后续操作需要做相应的修改
+(官方后续许多跟hadoop相关的操作是在 HADOOP_HOME 下的，我把命令全部放入到PATH中，后续操作更方便)。</p>
+
+<p>etc/profile:</p>
+
+<pre><code>export JAVA_HOME=/usr/lib/jdk1.8
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib  
+export PATH=$PATH:${JAVA_HOME}/bin
+</code></pre>
+
+<p>~/.bashrc:</p>
+
+<pre><code>export HADOOP_HOME=~/software/hadoop
+export PATH=$PATH:$HADOOP_HOME/bin
+export PATH=$PATH:$HADOOP_HOME/sbin
+</code></pre>
+
+<p>想让环境配置立即刷新需要使用下面的命令。</p>
+
+<pre><code>source /etc/profile
+source ~/.bashrc
+</code></pre>
+
+<h2 id="standalone-operation">Standalone Operation</h2>
+
+<p>By default, Hadoop is configured to run in a non-distributed mode, as a single Java process. This is useful for debugging.</p>
+
+<p>The following example copies the unpacked conf directory to use as input and then finds and displays every match of the given regular expression. Output is written to the given output directory.</p>
+
+<p>hadoop 默认为单击模式，这对 debugging 比较友好。这里复制一些文件到input，然后跑一个Wordcount程序读取input，输出到output。</p>
+
+<pre><code>$ mkdir input
+$ cp $HADOOP_HOME/etc/hadoop/*.xml input
+$ hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.5.jar grep input output 'dfs[a-z.]+'
+$ cat output/*
+</code></pre>
+
+<h2 id="pseudo-distributed-operation">Pseudo-Distributed Operation</h2>
+
+<p>Hadoop can also be run on a single-node in a pseudo-distributed mode where each Hadoop daemon runs in a separate Java process.</p>
+
+<p>通过利用多个java进程，hadoop 也可以在单个节点上运行伪分布式模式。</p>
+
+<p>Use the following:</p>
+
+<p>伪分布式需要先配置。</p>
+
+<p>$HADOOP_HOME/etc/hadoop/core-site.xml:</p>
+
+<pre><code class="language-xml">&lt;configuration&gt;
+    &lt;property&gt;
+        &lt;name&gt;fs.defaultFS&lt;/name&gt;
+        &lt;value&gt;hdfs://localhost:9000&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre>
+
+<p>$HADOOP_HOME/etc/hadoop/hdfs-site.xml:</p>
+
+<pre><code class="language-xml">&lt;configuration&gt;
+    &lt;property&gt;
+        &lt;name&gt;dfs.replication&lt;/name&gt;
+        &lt;value&gt;1&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre>
+
+<h2 id="setup-passphraseless-ssh">Setup passphraseless ssh</h2>
+
+<p>Now check that you can ssh to the localhost without a passphrase:</p>
+
+<p>先检测下是否能用密钥访问 localhost。</p>
+
+<pre><code>$ ssh localhost
+</code></pre>
+
+<p>If you cannot ssh to localhost without a passphrase, execute the following commands:</p>
+
+<p>如果你无法通过密钥来访问 localhost，执行下面的命令。</p>
+
+<pre><code>$ ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
+$ cat ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys
+$ chmod 0600 ~/.ssh/authorized_keys
+</code></pre>
+
+<h2 id="execution">Execution</h2>
+
+<p>The following instructions are to run a MapReduce job locally.</p>
+
+<p>以下的说明针对的是本地任务。</p>
+
+<p>Format the filesystem:</p>
+
+<p>第一次使用该文件系统需要初始化。</p>
+
+<p><img src="format.png" alt="format" /></p>
+
+<pre><code>$ hdfs namenode -format
+</code></pre>
+
+<p>Start NameNode daemon and DataNode daemon:</p>
+
+<p>用该命令启动节点。</p>
+
+<p><img src="start-dfs.png" alt="start-dfs" /></p>
+
+<pre><code>$ start-dfs.sh
+</code></pre>
+
+<p>The hadoop daemon log output is written to the $HADOOP_LOG_DIR directory (defaults to $HADOOP_HOME/logs).</p>
+
+<p>我们这里没有设置<code>$HADOOP_LOG_DIR</code>，使用默认的就好。</p>
+
+<p>Browse the web interface for the NameNode; by default it is available at:</p>
+
+<p>成功启动后，可以访问 Web 界面 <a href="http://localhost:50070">http://localhost:50070</a> 查看 NameNode 和 Datanode 信息，还可以在线查看 HDFS 中的文件。
+通过 50070 这个默认端口用浏览器浏览名字节点。</p>
+
+<p><img src="overview.png" alt="overview" /></p>
+
+<pre><code>NameNode - http://localhost:50070/
+</code></pre>
+
+<p>Make the HDFS directories required to execute MapReduce jobs:</p>
+
+<p>创建 DFS 文件来提供执行 maoreduce 任务。</p>
+
+<p><img src="dfs-mkdir.png" alt="mkdir" /></p>
+
+<pre><code>$ hdfs dfs -mkdir /user
+$ hdfs dfs -mkdir /user/&lt;username&gt;
+</code></pre>
+
+<p>Copy the input files into the distributed filesystem:</p>
+
+<p>把本地需要测试的文件复制到 dfs 里的文件系统中。</p>
+
+<p><img src="dfs-put.png" alt="dfs-put" /></p>
+
+<pre><code>$ hdfs dfs -put $HADOOP_HOME/etc/hadoop input
+</code></pre>
+
+<p>Run some of the examples provided:</p>
+
+<p>运行一个官方实例。可以看到已经运行了WordCount。</p>
+
+<p><img src="example.png" alt="example" /></p>
+
+<pre><code>$ hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.5.jar grep input output 'dfs[a-z.]+'
+</code></pre>
+
+<p>Examine the output files: Copy the output files from the distributed filesystem to the local filesystem and examine them:</p>
+
+<p>从 hadoop 中的 dfs 的复制 output 文件到本地一份。</p>
+
+<pre><code>$ hdfs dfs -get output output
+$ cat output/*
+</code></pre>
+
+<p>When you’re done, stop the daemons with:</p>
+
+<p>当你工作结束后，使用下面命令关闭。</p>
+
+<p><img src="stop-dfs.png" alt="stop-dfs" /></p>
+
+<pre><code>$ stop-dfs.sh
+</code></pre>
+
+<h2 id="reference">Reference</h2>
+
+<ul>
+<li><a href="http://hadoop.apache.org/docs/r2.7.6/hadoop-project-dist/hadoop-common/SingleCluster.html#Standalone_Operation">Hadoop: Setting up a Single Node Cluster.</a></li>
+<li><a href="https://blog.csdn.net/u013963380/article/details/72599793">ssh：connect to host localhost port 22: Connection refused</a></li>
+<li><a href="http://www.powerxing.com/install-hadoop/">Hadoop安装教程_单机/伪分布式配置</a></li>
+</ul>
+</div>
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
+        </footer>
+
+        
+
+        
+    </body>
+
+</html>
+

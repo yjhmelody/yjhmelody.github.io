@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>《Web API的设计与开发》读书笔记</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Fira Code', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: orange;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="yjhmelody.github.io/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira%20Code">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.53" />
+        
+
+        
+
+        
+            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+        
+
+    </head>
+
+    <body>
+        
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">《Web API的设计与开发》读书笔记</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="yjhmelody.github.io/">Home</a></li>
+                            
+                                <li><a href="yjhmelody.github.io/about/">About</a></li>
+                            
+                                <li><a href="yjhmelody.github.io/blog/">Posts</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:465402634@qq.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/yjhmelody/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/yjhmelody/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.douban.com/people/yjhmelody/"><i class="fa fa-douban"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    <div>
+        <h2>《Web API的设计与开发》读书笔记</h2>
+        <h5></h5>
+        
+<a href="yjhmelody.github.iotags/web"><kbd class="item-tag">Web</kbd></a>
+
+<a href="yjhmelody.github.iotags/api"><kbd class="item-tag">API</kbd></a>
+
+<a href="yjhmelody.github.iotags/book"><kbd class="item-tag">Book</kbd></a>
+
+
+    </div>
+
+    <div align="start" class="content">
+
+<h1 id="第1章-什么是-web-api">第1章 什么是 Web API</h1>
+
+<h2 id="web-api-的重要性">Web API 的重要性</h2>
+
+<p>一些在线服务能够对那些公开的API进行会话控制、访问控制、服务分析，提供面向用户的仪表盘，以及发布文档等，承接了各种各样的工作。</p>
+
+<p>通过对外公开 Web API，同外部其他服务的集成变得更加便捷，并从中衍生出了新的价值，使在线服务以及业务不断发展，逐步形成了“API经济学”的景象，并在这几年受到相当大的关注。</p>
+
+<h2 id="各种各样的-api-模式">各种各样的 API 模式</h2>
+
+<ul>
+<li>将已发布的 Web 在线服务的数据或功能通过 API 公开</li>
+<li>将附加在其他网页上的微件公开</li>
+<li>构建现代 Web 应用</li>
+<li>开发智能手机应用</li>
+<li>公司内部多个系统的集成</li>
+</ul>
+
+<h2 id="应该通过-api-公开什么">应该通过 API 公开什么</h2>
+
+<ul>
+<li>最简洁的答案是将你的在线服务所能做的事情全部通过API公开</li>
+<li>不存在彻底屏蔽搜集信息的行为，所以无需担心盗用，公开 API并不意味着毫无限制的访问</li>
+<li>公开 API 将原来的服务组合成新的应用来为用户提供服务的“间接销售”模式</li>
+</ul>
+
+<h2 id="设计优美-api-的重要性">设计优美 API 的重要性</h2>
+
+<ul>
+<li>易于使用</li>
+<li>便于更改</li>
+<li>健壮性好</li>
+<li>不怕公之于众</li>
+</ul>
+
+<h2 id="如何美化-web-api">如何美化 Web API</h2>
+
+<p>两个重要原则：</p>
+
+<ul>
+<li>设计规范明确的内容必须遵守相关规范</li>
+<li>没有设计规范的内容必须遵守相关事实标准</li>
+</ul>
+
+<h2 id="rest-与-web-api">REST 与 Web API</h2>
+
+<p>REST 依次一般指下面两种意思：</p>
+
+<ul>
+<li>符合 Fielding 的 REST 架构风格的Web服务系统</li>
+<li>符合 RPC风格的 XML (或JSON) + HTTP 接口的系统(不使用SOAP)</li>
+</ul>
+
+<h2 id="小结">小结</h2>
+
+<ul>
+<li>如果尚未公开 Web AP，则应立即考虑公开</li>
+<li>设计优美的 Web API</li>
+<li>不用过分拘泥于 REST 一词</li>
+</ul>
+</div>
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
+        </footer>
+
+        
+
+        
+    </body>
+
+</html>
+

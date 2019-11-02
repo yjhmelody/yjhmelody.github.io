@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Network on The LIFE</title>
+    <link>yjhmelody.github.io/tags/network/</link>
+    <description>Recent content in Network on The LIFE</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 26 Dec 2017 22:03:46 +0000</lastBuildDate>
+    
+	<atom:link href="yjhmelody.github.io/tags/network/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>IEEE802.11概述</title>
+      <link>yjhmelody.github.io/blog/posts/ieee802.11%E6%97%A0%E7%BA%BFlans%E6%A6%82%E8%BF%B0/</link>
+      <pubDate>Tue, 26 Dec 2017 22:03:46 +0000</pubDate>
+      
+      <guid>yjhmelody.github.io/blog/posts/ieee802.11%E6%97%A0%E7%BA%BFlans%E6%A6%82%E8%BF%B0/</guid>
+      <description>IEEE 802.11无线 LANs 概述 无线链路和网络特征 802.11协议簇是国际电工电子工程学会（IEEE）为无线局域网络制定的标准。虽然WI-FI使用了802.11的媒体访问数据链路层（DLL）和物理层（PHY），但是两者并不完全一致。
+这里主要概述了 802.11无线LAN的特征。不过首先应该关注的是无线网络与有线网络的区别。
+当我们寻找有线和无线网络的重要区别时，应该重点关注链路层，我们确实可以发现有线链路和无线链路有许多重要区别：
+ 递减的信号强度。信号强度受到发送方和接收方距离的增加而递减。 来自其他源的干扰。在同一个频段发送信号的电波源会互相干扰。 多径传播（multipath propagation）。当电磁波受到反射，会在发送方和接收方之间走过多条不同长度的路径，此时出现多径传播，这使得接受的信号变得模糊。  IEEE 802.11 标准 常见的关于LAN的802.11标准包括 802.11b、802.11a、802.11g等。 它们使用相同的媒体访问协议CSMA/CA，并且使用相同的链路层帧格式。
+802.11 体系结构 802.11 体系结构的基本构建模块是基本服务集（Basic Service Set BSS），一个BBS包含若干个无线站点和一个被称为接入点（AP）的中央基站。与以太网设备类似，每个802.11无线站点都具有6字节的MAC地址。每个AP的无线接口也具有一个MAC地址。这些MAC地址也由IEEE管理，理论上全球唯一。
+信道与关联 在802.11中，每个无线站点在发送或者接受网络层数据前，必须与一个AP相关联。而安装一个AP时，需要为其分配单字或者双字的服务集标识（SSID）。除了SSID，还需要分配一个信道号。
+信道：
+802.11定义了11个部分重叠的信道，当且仅当2个信道由4个或更多的信道隔开时，它们才不重叠。比如 1、6、11是唯一的3个非重叠信道集合。这样就可以在同一个物理网络安装3个AP。
+关联：
+为了获得互联网接入，你的无线站点需要加入其中一个子网并需要与其中一个AP相关联（associate）。关联意味着该无线站点在自身与该AP之间创建了一个虚拟线路。
+然而，首先得回答：你的无线站点如何与某个特定的AP相关联？或者你的无线站点如何知道当前位置哪个AP可以使用？
+802.11标准要求每个AP周期性地发送信标帧（beacon frame），每个信标帧包括该AP的SSID和MAC地址。 你的无线站点为了得知正在发送信标帧的AP，扫描11个信道，找到可能来着可能位于该区域的AP所发出的信标帧。
+不过，802.11标准没有指定选择哪个可用的AP进行关联的算法，这个由802.11固件和无线主机的软件设计者来设计。 比如，主机选择接收到的具有最高信号强度的信标帧，但可能过载。
+这里扫描分两种：
+ 被动扫描（passive scanning），自AP发送信标帧，无线站点*扫描信道*和*监听信标帧*，然后向选择的AP发送*关联请求帧*，最后AP响应关联响应帧 主动扫描（active scanning），无线站点广播*探测请求帧*，AP发送*探测响应*，然后无线站点选择AP发送*关联请求帧*，最后AP响应关联响应帧  鉴别与接入 为了与特定的AP创建关联，某无线站点可能需要向该AP鉴别它自身。
+802.11 提供了几种不同的鉴别和接入方法
+ 基于站点的MAC地址允许其接入网络 基于用户名和口令  上述两种情况下，可能使用的RADIUS（基于UDP）和DIAMETER（最初作为RADIUS的改良）这样的协议。</description>
+    </item>
+    
+    <item>
+      <title>DNS知识点</title>
+      <link>yjhmelody.github.io/blog/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%AA%8C/</link>
+      <pubDate>Sat, 11 Nov 2017 09:40:04 +0000</pubDate>
+      
+      <guid>yjhmelody.github.io/blog/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%AA%8C/</guid>
+      <description>DNS DNS 是域名系统（Domain Name System）的缩写，它是一种用于 TCP/IP 应用程序的分布式数据库，它提供主机名字和 I P 地址之间的转换及有关电子邮件的选路信息。所谓“分布式”是指在 Internet 上的单个站点不能拥有所有的信息。每个站点（如大学中的系、校园、公司或公司中的部门）保留它自己的信息数据库，并运行一个服务器程序供 Internet上的其他系统（客户程序）查询。
+DNS 命名方式中，采用了分散和分层的机制来实现域名空间的委派授权，以及域名与地址相转换的授权。通过使用 DNS 的命名方式来为遍布全球的网络设备分配域名，而这则是由分散在世界各地的服务器实现的。
+DNS 工作流程 域名服务分为客户端和服务器端，客户端提出请求，询问一个 Domain Name 的 IP 地址，服务器端必须回答客户端的请求。本地 DNS 首先查询自己的数据库，如果自己的数据库中没有对应的 IP 地址，则向本地 DNS 上所设的上一级 DNS 询问，得到结果之后，将收到的结果保存在高速缓冲区，并回答给客户端。标识字段由客户程序设置并由服务器返回结果。客户程序通过它来确定响应与查询是否匹配。16 bit 的标志字段被划分为若干子字段
+DNS 协议 标志中每一位的含义如下：
+ QR：是 1 bit 字段，0 表示查询报文，1 表示响应报文。 Opcode：报文类型，是一个 4 bit 字段，通常值为 0（标准查询），其他值为 1（反向查询）和 2（服务器状态请求）。 AA：是 1 bit 字段，表示“授权回答（authoritative answer）”，如果此位为 1，表示服务器对问题部分的回答是权威性的。 TC：是 1 bit 字段，表示“可截断的（truncated）”。使用 UDP 时，它表示当应答的总长度超过 512 字节时，只返回前 512 个字节。 RD：是 1 bit 字段，表示“期望递归（recursion desired）”。该比特能在一个查询中设置，并在响应中返回。这个标志告诉名字服务器必须处理这个查询，也称为一个递归查询。如果该位为 0，且被请求的名字服务器没有一个授权回答，它就返回一个能解答该查询的其他名字服务器列表，这称为迭代查询。 RA：是 1 bit 字段，表示“可用递归”。如果名字服务器支持递归查询，则在响应中将该比特设置为 1。 Zero：随后的 3 bit 字段必须为 0。 Rcode：是一个 4 bit 的返回码字段。通常的值为 0（没有差错）和 3（名字差错）。名字差错只有从一个授权 DNS 服务器上返回，它表示在查询中制定的域名不存在。随后的 4 个 16 bit 字段说明最后 4 个变长字段中包含的条目数。对于查询报文，问题（question）数通常是 1，而其他 3 项则均为 0。类似地，对于应答报文，回答数至少是 1，剩下的两项可以是 0 或非 0。  DNS 抓包 这里DNS报文首部前16bit格式如下：</description>
+    </item>
+    
+  </channel>
+</rss>
