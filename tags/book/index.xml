@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Book on Minimal</title>
-    <link>http://example.com/tags/book/</link>
+    <link>/tags/book/</link>
     <description>Recent content in Book on Minimal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 24 Mar 2019 13:57:37 +0000</lastBuildDate>
     
-	<atom:link href="http://example.com/tags/book/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/book/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>实现Lua-AST</title>
-      <link>http://example.com/blog/posts/implement-lua-ast/</link>
+      <link>/blog/posts/implement-lua-ast/</link>
       <pubDate>Sun, 24 Mar 2019 13:57:37 +0000</pubDate>
       
-      <guid>http://example.com/blog/posts/implement-lua-ast/</guid>
+      <guid>/blog/posts/implement-lua-ast/</guid>
       <description>实现Lua解释器-AST 调研 最近终于开始做毕设了，于是开始考虑是否用一款语法分析生成器来写Lua前端，遂发现Pest, 一款Rust的语法分析器，使用PEG文法。这个文法有点像BNF和正则的融合，但是定义无歧义，表达能力小于等于CFG。写起来比较舒服，考虑到Lua官方文法整理出来有许多左递归文法，改写很麻烦（我不太会），虽然Pest本身编写很友好，但是感觉文档描述有点少，有些关键的地方使用不清楚，加上没有IDE的代码提示，遂放弃（不过写一些小语言的简单文法以后可以考虑）。之前用过Nom这款解析组合子库，这个库性能非常好，但是我觉得语法设计的非常怪异，之前用也没搞清楚，对于之前编写的某个玩具虚拟机的字节码编译器使用起来也是小题大做，反而搞复杂了。
 于是乎，还是打算手写。考虑到Lua本身文法少，手写代码量不会多上几百行；自己之前也没有实现一个比较满意的解析器；如果用语法生成生成器，首先还得学，然后得花时间改写文法，有点得不偿失。
 词法 首先随便写了点词法这块，发现我抽象能力太弱了，本来想多用第三方库实现更抽象性能更好的词法分析类，但我有点不太熟悉泛型编程，而且前期具体工作不明确，写了很大概率后面要改。于是乎，就是很粗糙地使用了String类型。而对于具体的词法分析，感觉写过很多次，每次套路都写的不一样，参考别人的实现，也都是五花八门，我也没法判断哪种够优雅。而对于Lua语言，毕竟是工业级语言，词法分析实现细节一定要参考书或官方文档，语法细节非常多。
@@ -28,10 +28,10 @@
     
     <item>
       <title>《DDIA》概念整理</title>
-      <link>http://example.com/blog/posts/ddia%E6%A6%82%E5%BF%B5%E6%95%B4%E7%90%86/</link>
+      <link>/blog/posts/ddia%E6%A6%82%E5%BF%B5%E6%95%B4%E7%90%86/</link>
       <pubDate>Thu, 30 Aug 2018 20:00:00 +0000</pubDate>
       
-      <guid>http://example.com/blog/posts/ddia%E6%A6%82%E5%BF%B5%E6%95%B4%E7%90%86/</guid>
+      <guid>/blog/posts/ddia%E6%A6%82%E5%BF%B5%E6%95%B4%E7%90%86/</guid>
       <description>最近指忙里抽闲的看《Designing Data-Intensive Applications》（《设计数据密集型应用》）这本书，主要书看中文为主。这本书非常好，我现在刚看完一半。这本书让你认识到了数据库系统和分布式系统的大概貌，没有深入繁琐的具体细节也没有让人浅尝辄止。这本书网络上评价很高，甚至豆瓣评分有2个评分，一个是9.5分，一个是10分。现在即使想作为一个普通的后端工程师也需要学习分布式知识了，强烈推荐这本书。
 我发现书后面的术语表非常精良，个人认为：虽然可能还涵盖不到一半的核心概念，但是如果能深刻的理解这术语表部分的，那对数据库系统和分布式系统就有了比较好的整体认识了。
 顺便，光看这本书就需要接触过数据结构，操作系统，计算机网络，数据库原理，还有少部分组成原理的知识，不然只能知其然不知其所以然。限于自己的个人水平和这方面不多的实践，有些部分还没有理解到位。个人认为，学习分布式可能还需要学习一点并行编程和网络编程，分布式系统可能是综合性比较强的方向了。并且根据具体要做的分布式系统，可能还需要机器学习，搜索引擎等知识。
@@ -43,10 +43,10 @@ atomic  In the context of concurrent operations:describing an operation that app
     
     <item>
       <title>我的五月反思</title>
-      <link>http://example.com/blog/posts/2018%E5%B9%B45%E6%9C%88%E5%8F%8D%E6%80%9D/</link>
+      <link>/blog/posts/2018%E5%B9%B45%E6%9C%88%E5%8F%8D%E6%80%9D/</link>
       <pubDate>Sun, 06 May 2018 22:48:58 +0000</pubDate>
       
-      <guid>http://example.com/blog/posts/2018%E5%B9%B45%E6%9C%88%E5%8F%8D%E6%80%9D/</guid>
+      <guid>/blog/posts/2018%E5%B9%B45%E6%9C%88%E5%8F%8D%E6%80%9D/</guid>
       <description>懒惰的自己与混沌的事情 首先恭喜自己美赛拿了M奖。然后接下来的话都是对这一个多月的反思。
 读书 之前提到的要看的几本书。 - 《C++性能优化指南》随便看了几章后就还回去了，暂时用不到，可能需要工作2，3年才能有较深刻的体会，不然现在看都是一些大道理罢了，虽然知道这么做非常多，但是因为没有这些编码经验导致印象非常模糊，无法自发地去利用这些知识。 - 《Effective Modern C++》这本书一直在看，已经看了半本左右吧。我读的是英文版，而且是乱序读的，对哪个 Item 感兴趣就读哪个。这本书基本是对 C++11 C++14 的新特性总结与避坑。这些新特性有一半我已经接触过了，所以有些 Item 看起来还好，只需要注意几个细节。而有些特性平时使用不到，理解不够深刻，读起来也是懵懂的。 - 《深入理解JVM》这本书是几乎全部快速扫过一遍了。可惜啊，现在很多记不清了，只有一些感性的认知记忆了。毕竟许多知识就是需要多遍的理解并且实践才能获得真正的深刻。 - 《Scala函数式编程》，这本难度还是超出了我的预期。它把太多的内容交给了读者自己去编写，而且我觉得它里面的部分内容组织的有一定问题，后面也全然不提 Scala 的那些语法，以至于得自己先去了解那些语法。目前为止我粗略读了半本，但是习题才写到第五章。 - 《算法新解》，惭愧。后来就几乎没有看了，它偏重于函数式，所以可以说跟本科要求的数据结构已经不怎么搭了。而且这本书大多数内容引用了一个博士论文——专门研究函数式数据结构的论文，可见这本书其实没有作者所说的非常基础。
 除了以上几本计划内的书，其实还有好多本计划外的书，比如《七周七语言》，非常好的书，不过难度也是比较大的，我主要是把它当做扩展自己的视野的科普书来看的。之前的 Lua 那篇博客就是整理自该书，遗憾的是后面的那些内容太庞杂了，没有精力继续整理。还有个比较重要的是 《Programming in Scala, Third Edition : A comprehensive step-by-step guide》，这是 Scala 之父的作品。我直接读英文版，已经接近半本了。实话说，我觉得我还是没怎么掌握——我真的编码太少了。这本书真的挺厚的，堪比《C++ Primer》，Scala 本身复杂度也是不亚于 C++ 的。
@@ -60,10 +60,10 @@ atomic  In the context of concurrent operations:describing an operation that app
     
     <item>
       <title>七周七语言2-Lua</title>
-      <link>http://example.com/blog/posts/%E4%B8%83%E5%91%A8%E4%B8%83%E8%AF%AD%E8%A8%802-lua/</link>
+      <link>/blog/posts/%E4%B8%83%E5%91%A8%E4%B8%83%E8%AF%AD%E8%A8%802-lua/</link>
       <pubDate>Fri, 20 Apr 2018 21:37:57 +0000</pubDate>
       
-      <guid>http://example.com/blog/posts/%E4%B8%83%E5%91%A8%E4%B8%83%E8%AF%AD%E8%A8%802-lua/</guid>
+      <guid>/blog/posts/%E4%B8%83%E5%91%A8%E4%B8%83%E8%AF%AD%E8%A8%802-lua/</guid>
       <description>Lua Lua一览 Lua 是一门基于 table 的编程语言，它的核心抽象层简单而强大，你可以用它实现过程式、面向对象、事件驱动等。 Lua 的 table 很适合基于原型的面向对象编程。这种编程风格中，类和实例不是割裂的概念。你先创建一个实例，这个实例看起来像你需要的对象。然后你再把这个实例复制多份，对每一份做一些定制化。
 初窥 Lua 的语法友好，并且易于接近，无须担心分号或者空格写哪里。空格对 Lua 来说不太重要，两个语句之间甚至不需要换行。Lua 使用 &amp;ndash; 来注释。
 以下示例主要在REPL中运行。
@@ -74,10 +74,10 @@ atomic  In the context of concurrent operations:describing an operation that app
     
     <item>
       <title>2018学习和复习</title>
-      <link>http://example.com/blog/posts/2018%E5%AD%A6%E4%B9%A0%E5%92%8C%E5%A4%8D%E4%B9%A0/</link>
+      <link>/blog/posts/2018%E5%AD%A6%E4%B9%A0%E5%92%8C%E5%A4%8D%E4%B9%A0/</link>
       <pubDate>Tue, 20 Mar 2018 19:21:06 +0000</pubDate>
       
-      <guid>http://example.com/blog/posts/2018%E5%AD%A6%E4%B9%A0%E5%92%8C%E5%A4%8D%E4%B9%A0/</guid>
+      <guid>/blog/posts/2018%E5%AD%A6%E4%B9%A0%E5%92%8C%E5%A4%8D%E4%B9%A0/</guid>
       <description>2018学习和复习 大学做过无数次计划，似乎少有完全达成，这样看来，其实是自己的问题。所以特此再做一次计划，计划不会特别具体，但要让自己严格执行。
 学习 把学习和复习分开来计划其实是很明智的。复习计划是与考研强相关的，学习计划则是与专业强相关，与考研弱相关的。当然介于考研其实是场持久战，而且如果要考408的话，复习时间其实是很紧的，所以复习期间看考研不相关的东西其实是不太明智的，除非能提早开始准备。 当然，我这个人就这样，不喜欢总是做一些课内的或者合时宜的事情，偶尔会在课外捣鼓一些其他东西。这次准备看一些感兴趣的又能对考研的复习有一定作用的书籍。 首先是最近已经在看了的，《Scala函数式编程》。因为课内可能需要捣鼓大数据，分布式什么的，这本书可以学习到一些Scala编程，其实有一定帮助。但对考研帮助不大，可能里面涉及到的少部分函数式数据结构，是对复习数据结构有帮助，但是其实应该不明显的。这本书习题蛮多的，后面还特别吃力。所以最近可能会缓一缓，基本上一个月看一章足矣。记得寒假看了点《JS函数式编程》和《Haskell趣学指南》，其实已经学到了不少函数式知识了。Scala这本也基本没超出之前所看的，唯一区别的是这本难度更大，而且有大量习题。 第二本是《算法新解》，这本也开始看了，不过没有前者看深刻。这本除了图数据结构以外，基本囊括了数据结构这门课的知识点并且还有许多高级数据结构，除此之外还增加了近一半函数式数据结构和算法。这本应该不会全看完，视情况而定。前期数据结构复习以此为准，毕竟要对自己更高要求嘛。 未来几个月打算看的书有《深入理解JVM》，《Effective Modern C++》，《C++性能优化指南》。这几本书只打算在这个学期和暑假的时候看下，3本通读半本内容后，就作为参考了。 接下来说说我为什么选这3本。 《深入理解JVM》早就想看了，因为以前厌恶Java的原因导致我也不想了解JVM。许多Java实习生，其实应该看这本书，因为对他们面试和工作都有用处。不过对我而已，这本书其实在讲虚拟机的体系结构罢了，它其实就只是在计算机系统结构上又抽象出了一层体系结构。这样说来，了解过JVM的体系结构以后，其实对计算机体系结构甚至操作系统也有比较大的帮助。考虑到考研可能要考组成原理，而组成原理与系统结构其实知识点很相近，所以说这本书对组成原理复习是有一定帮助的。 《Effective Modern C++》，这本是在大一学C++的时候就想要读了。然而，那时候功底不够，后来大二的时候接触C++比较少了，而且有对C++一些历史原因和特性的无奈与恐惧，还有英文功底不好等原因，没有看。最近开始拿C++刷题了，又扫过几眼C++的书，觉得对STL掌握更好了，最后是因为Rust，导致我挺想看的。 《C++性能优化指南》，这本我其实一点也不了解，单纯看目录，感觉对自己的底层编程有帮助，姑且作为参考吧。
 复习 身边人都陆陆续续开始复习了，而我课程其实不少，始终只是在记单词和刷点题。当数学复习开始的时候，大概就是正式进入复习状态吧。网上查说数学复习开始时间是3-6月，而专业课复习开始是6-7月。所以我计划5月一定要开始数学复习，而专业目前只看数据结构并且刷题。专业课7月正式开始。其实这样真的蛮紧张的，所以英语复习是每天都不能松懈的，并且争取这次过6级。 关于复习资料，目前还没收集全，每周会查阅一些信息来补充复习计划。
@@ -87,10 +87,10 @@ atomic  In the context of concurrent operations:describing an operation that app
     
     <item>
       <title>2018新年与考研</title>
-      <link>http://example.com/blog/posts/2018%E6%96%B0%E5%B9%B4%E4%B8%8E%E8%80%83%E7%A0%94/</link>
+      <link>/blog/posts/2018%E6%96%B0%E5%B9%B4%E4%B8%8E%E8%80%83%E7%A0%94/</link>
       <pubDate>Wed, 07 Mar 2018 13:57:37 +0000</pubDate>
       
-      <guid>http://example.com/blog/posts/2018%E6%96%B0%E5%B9%B4%E4%B8%8E%E8%80%83%E7%A0%94/</guid>
+      <guid>/blog/posts/2018%E6%96%B0%E5%B9%B4%E4%B8%8E%E8%80%83%E7%A0%94/</guid>
       <description>2018新年与考研 新年 新的2018年到来了，还没用文章对自己过去一年做一个总结。寒假的时候参加美赛，奈何自己太菜，估计只能获得一个参赛奖吧，好像也没什么好说的。
 寒假的后半段基本是自学一些感兴趣的东西，比如Haskell、Rust、Scala，主要是学习函数式编程吧，不过其实也就才刚入门的水平而已。除此之外，还在查阅一些考研相关的资料与信息，因为一直以来都有考研的打算，毕竟GPA不理想，没有机会保研嘛。
 现状与打算 到了大三下，大部分同学的课表就比较空了，但我可能还是蛮多的，跟大一上的时候差不多吧，不过幸好很多是选修课，不过这些选修课也都挺严格的。而创新实践课老师这个学期给了很多方向，让我们自己选择感兴趣的去学习，只要能真得学到东西就好了。我觉得这样挺不错的，之前的数据可视化我就不太感冒，自己的几何知识真的不太好。虽然现在也是数据可视化相关的，但是细分下来，可以有很多具体的不同方向的知识。比如做数据处理相关的，大数据方向。具体点就是学习分布式处理框架比如hadoop、spark、storm之类。如果硬要说兴趣的话，对这些还是有一点点兴趣的。至于可视化还有一些其他的工作，就交给其他组员做吧。当然我不满足于只是用用这些框架，虽然会应用是很重要，但是我打算学一些分布式系统的知识，这样学习也更深刻。比如CMU和MIT的分布式课，都有公开的，不过好像都是研究生级的课，而且资料不太全，可能很麻烦，这个具体看情况吧。
@@ -104,10 +104,10 @@ atomic  In the context of concurrent operations:describing an operation that app
     
     <item>
       <title>JS函数式编程笔记2</title>
-      <link>http://example.com/blog/posts/js%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B02/</link>
+      <link>/blog/posts/js%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B02/</link>
       <pubDate>Wed, 07 Feb 2018 14:27:31 +0000</pubDate>
       
-      <guid>http://example.com/blog/posts/js%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B02/</guid>
+      <guid>/blog/posts/js%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B02/</guid>
       <description>JS函数式编程 笔记里面常常依赖一些库和之前的代码，而且可能存在理论上的代码和未实现的函数，阅读时，需要仔细。
 下面部分经常的东西后面经常用到，我先导入。
 const curry = require(&#39;lodash/curry&#39;) const _ = require(&#39;lodash&#39;) const fp = require(&#39;lodash/fp&#39;) const moment = require(&#39;moment&#39;) let compose = function(f, g){ return function(x){ return f(g(x)) } } let toUpperCase = function(str){ return str.toUpperCase() } let toLowerCase = function(str){ return str.toLowerCase() }  Hindley-Milner 类型签名 初识类型 刚接触函数式编程的人很容易深陷类型签名（type signatures）的泥淖。类型（type）是让所有不同背景的人都能高效沟通的元语言。很大程度上，类型签名是以 “Hindley-Milner” 系统写就的。
@@ -117,10 +117,10 @@ const curry = require(&#39;lodash/curry&#39;) const _ = require(&#39;lodash&#39;
     
     <item>
       <title>JS函数式编程笔记1</title>
-      <link>http://example.com/blog/posts/js%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B01/</link>
+      <link>/blog/posts/js%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B01/</link>
       <pubDate>Mon, 11 Dec 2017 21:47:31 +0000</pubDate>
       
-      <guid>http://example.com/blog/posts/js%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B01/</guid>
+      <guid>/blog/posts/js%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B01/</guid>
       <description>JS函数式编程 我们在做什么  “we both know what happens when you assume”，源自一句名言“When you assume you make an ASS of U and ME”，意思是“让两人都难堪”）。但我猜想你在使用可变状态（mutable state）、无限制副作用（unrestricted side effects）和无原则设计（unprincipled design）的过程中已经遇到过一些麻烦。
  现在已经有一些通用的编程原则了，各种缩写词带领我们在编程的黑暗隧道里前行：DRY（不要重复自己，don&amp;rsquo;t repeat yourself），高内聚低耦合（loosecoupling high cohesion），YAGNI （你不会用到它的，ya ain&amp;rsquo;t gonna need it），最小意外原则（Principle of least surprise），单一责任（single responsibility）等等。这些原则同样适用于函数式编程(FP)。
 先看基本的例子
@@ -129,10 +129,10 @@ let add = function (x, y) { return x + y }; let multiply = function (x, y) { ret
     
     <item>
       <title>从《线性代数应该这样学》到《Redis的设计与实现》</title>
-      <link>http://example.com/blog/posts/%E4%BB%8E%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%BA%94%E8%AF%A5%E8%BF%99%E6%A0%B7%E5%AD%A6%E5%88%B0redis%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/</link>
+      <link>/blog/posts/%E4%BB%8E%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%BA%94%E8%AF%A5%E8%BF%99%E6%A0%B7%E5%AD%A6%E5%88%B0redis%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/</link>
       <pubDate>Fri, 08 Sep 2017 21:50:19 +0000</pubDate>
       
-      <guid>http://example.com/blog/posts/%E4%BB%8E%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%BA%94%E8%AF%A5%E8%BF%99%E6%A0%B7%E5%AD%A6%E5%88%B0redis%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/</guid>
+      <guid>/blog/posts/%E4%BB%8E%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%BA%94%E8%AF%A5%E8%BF%99%E6%A0%B7%E5%AD%A6%E5%88%B0redis%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/</guid>
       <description>从《线性代数应该这样学》到《Redis的设计与实现》 《线性代数应该这样学》 起因 这本是好早之前买的，当时想着是时候复习一下线性代数了，因为以后要用到（那时候想到可能需要接触一下机器学习了）。买来之后发现太数学了，怕是数学系的许多人也吃不消看这种书。
 收获与总结 这本书可以作为第一本或者第二本线性代数的学习材料。但这本书远比本科工科的要求要高出许多，以致于作者在前言里说，这本每页应当至少投入一小时来学习。匆匆看完前两章我便放下了，书里充斥着大量证明，从最基本的向量空间的定义引出基本的性质，然后用证明的方式来引出各种向量空间的特点跟性质。而这是第一章的内容，读起来还是挺熟悉的感觉的，只是换了一种表述各种概念的方式和术语，但深入思考便与之前学习的向量没有多少差别。这里与我大一学的过程就差别大了，大一是直接从矩阵着手，最后讲到向量，但那时候觉得向量是很突兀的东西，甚至跟高中学习的向量完全不一样，没有从几何的角度稍加解释向量的一些特点。而这本书从标量开始，比较了标量跟向量的异同，开阔了一下从标量到向量的思路，本质上它们比自己想像的还要相似。
 第二章接着从有限维度引申到无限维度，在讨论了无限维度的一些异同后，继续深入了向量空间的各种特性，譬如张成空间，直和这些陌生的概念。而这些与普通向量之间的联系是很紧密的，但读到后面愈发抽象，我其实也忘记了七七八八了，惭愧。
@@ -148,10 +148,10 @@ let add = function (x, y) { return x + y }; let multiply = function (x, y) { ret
     
     <item>
       <title>最近一周总结</title>
-      <link>http://example.com/blog/posts/%E6%9C%80%E8%BF%91%E4%B8%80%E5%91%A8%E6%80%BB%E7%BB%93/</link>
+      <link>/blog/posts/%E6%9C%80%E8%BF%91%E4%B8%80%E5%91%A8%E6%80%BB%E7%BB%93/</link>
       <pubDate>Sun, 20 Aug 2017 20:57:17 +0000</pubDate>
       
-      <guid>http://example.com/blog/posts/%E6%9C%80%E8%BF%91%E4%B8%80%E5%91%A8%E6%80%BB%E7%BB%93/</guid>
+      <guid>/blog/posts/%E6%9C%80%E8%BF%91%E4%B8%80%E5%91%A8%E6%80%BB%E7%BB%93/</guid>
       <description>总结 近况 杂项 发现已经漏了好几天没有写博客，也不知道自己能否坚持下去，最近可能也比较懈怠。C++的模版接触了下，发现使用还是容易掌握的，但后来就没有学下去了。靠这样学是永远学不完的，甚至学了一部分忘记七七八八了。打算下学期如果适合C++编程的任务，尽量使用C++来完成，这样有任务的使用C++应该能学的更快，更扎实，C++学好了，很多东西也都能学好，果然不是空穴来风。
 兴趣方向 最近学习深度学习的基础，主要是全连接神经网络(FNN)和卷积神经网络(CNN)，其实正式学习是下周，所以这周在机器学习方面懈怠很多。其他方面呢，编译原理，《编译器设计》看了些内容，感觉很有收获，虽然不是直接关于编译原理的收获，但对计算机的全貌有了更进一步的了解。期间，查了一些关于链接的知识，也看了一点点关于linux kernel的知识，总的来说，收获了一点点学习这些知识的方法论。
 英文资料 这两天买了两本英文书，打算常常读一读，一本是go圣经，一本是《编译原理与实践》。两本对于我来说应该难度不大。go圣经我看过半本中文版，虽然还掌握的不好，但有了前置知识，看英文只是时间问题。《编译原理与实践》比《龙书》跟《编译器设计》要简单些，所以买了英文版，打算下学期的编译原理课配合着读。这么说来了，在编译原理相关的书里，我已经接触了6，7本了，但其实没有精读过任何一本。下学期重点看这三本吧，以我现在半吊子的水平，希望本科基本能看完3，4本。毕竟最想从事的就是编译器相关工作，也说不清为什么偏爱这个。
@@ -160,10 +160,10 @@ let add = function (x, y) { return x + y }; let multiply = function (x, y) { ret
     
     <item>
       <title>《Web API的设计与开发》读书笔记</title>
-      <link>http://example.com/blog/posts/web-api%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%BC%80%E5%8F%91%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
+      <link>/blog/posts/web-api%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%BC%80%E5%8F%91%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Tue, 08 Aug 2017 12:11:10 +0000</pubDate>
       
-      <guid>http://example.com/blog/posts/web-api%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%BC%80%E5%8F%91%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
+      <guid>/blog/posts/web-api%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%BC%80%E5%8F%91%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
       <description> 第1章 什么是 Web API Web API 的重要性 一些在线服务能够对那些公开的API进行会话控制、访问控制、服务分析，提供面向用户的仪表盘，以及发布文档等，承接了各种各样的工作。
 通过对外公开 Web API，同外部其他服务的集成变得更加便捷，并从中衍生出了新的价值，使在线服务以及业务不断发展，逐步形成了“API经济学”的景象，并在这几年受到相当大的关注。
 各种各样的 API 模式  将已发布的 Web 在线服务的数据或功能通过 API 公开 将附加在其他网页上的微件公开 构建现代 Web 应用 开发智能手机应用 公司内部多个系统的集成  应该通过 API 公开什么  最简洁的答案是将你的在线服务所能做的事情全部通过API公开 不存在彻底屏蔽搜集信息的行为，所以无需担心盗用，公开 API并不意味着毫无限制的访问 公开 API 将原来的服务组合成新的应用来为用户提供服务的“间接销售”模式  设计优美 API 的重要性  易于使用 便于更改 健壮性好 不怕公之于众  如何美化 Web API 两个重要原则：

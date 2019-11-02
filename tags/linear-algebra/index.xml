@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linear Algebra on Minimal</title>
-    <link>http://example.com/tags/linear-algebra/</link>
+    <link>/tags/linear-algebra/</link>
     <description>Recent content in Linear Algebra on Minimal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 08 Sep 2017 21:50:19 +0000</lastBuildDate>
     
-	<atom:link href="http://example.com/tags/linear-algebra/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/linear-algebra/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>从《线性代数应该这样学》到《Redis的设计与实现》</title>
-      <link>http://example.com/blog/posts/%E4%BB%8E%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%BA%94%E8%AF%A5%E8%BF%99%E6%A0%B7%E5%AD%A6%E5%88%B0redis%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/</link>
+      <link>/blog/posts/%E4%BB%8E%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%BA%94%E8%AF%A5%E8%BF%99%E6%A0%B7%E5%AD%A6%E5%88%B0redis%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/</link>
       <pubDate>Fri, 08 Sep 2017 21:50:19 +0000</pubDate>
       
-      <guid>http://example.com/blog/posts/%E4%BB%8E%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%BA%94%E8%AF%A5%E8%BF%99%E6%A0%B7%E5%AD%A6%E5%88%B0redis%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/</guid>
+      <guid>/blog/posts/%E4%BB%8E%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%BA%94%E8%AF%A5%E8%BF%99%E6%A0%B7%E5%AD%A6%E5%88%B0redis%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/</guid>
       <description>从《线性代数应该这样学》到《Redis的设计与实现》 《线性代数应该这样学》 起因 这本是好早之前买的，当时想着是时候复习一下线性代数了，因为以后要用到（那时候想到可能需要接触一下机器学习了）。买来之后发现太数学了，怕是数学系的许多人也吃不消看这种书。
 收获与总结 这本书可以作为第一本或者第二本线性代数的学习材料。但这本书远比本科工科的要求要高出许多，以致于作者在前言里说，这本每页应当至少投入一小时来学习。匆匆看完前两章我便放下了，书里充斥着大量证明，从最基本的向量空间的定义引出基本的性质，然后用证明的方式来引出各种向量空间的特点跟性质。而这是第一章的内容，读起来还是挺熟悉的感觉的，只是换了一种表述各种概念的方式和术语，但深入思考便与之前学习的向量没有多少差别。这里与我大一学的过程就差别大了，大一是直接从矩阵着手，最后讲到向量，但那时候觉得向量是很突兀的东西，甚至跟高中学习的向量完全不一样，没有从几何的角度稍加解释向量的一些特点。而这本书从标量开始，比较了标量跟向量的异同，开阔了一下从标量到向量的思路，本质上它们比自己想像的还要相似。
 第二章接着从有限维度引申到无限维度，在讨论了无限维度的一些异同后，继续深入了向量空间的各种特性，譬如张成空间，直和这些陌生的概念。而这些与普通向量之间的联系是很紧密的，但读到后面愈发抽象，我其实也忘记了七七八八了，惭愧。

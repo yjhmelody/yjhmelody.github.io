@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ml on Minimal</title>
-    <link>http://example.com/tags/ml/</link>
+    <link>/tags/ml/</link>
     <description>Recent content in Ml on Minimal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 24 Sep 2017 19:29:28 +0000</lastBuildDate>
     
-	<atom:link href="http://example.com/tags/ml/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/ml/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>人工智能发展报告</title>
-      <link>http://example.com/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%8F%91%E5%B1%95%E6%8A%A5%E5%91%8A/</link>
+      <link>/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%8F%91%E5%B1%95%E6%8A%A5%E5%91%8A/</link>
       <pubDate>Sun, 24 Sep 2017 19:29:28 +0000</pubDate>
       
-      <guid>http://example.com/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%8F%91%E5%B1%95%E6%8A%A5%E5%91%8A/</guid>
+      <guid>/blog/posts/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%8F%91%E5%B1%95%E6%8A%A5%E5%91%8A/</guid>
       <description>人工智能的发展 数据挖掘课程的作业报告，放在这里分享一下，都是一些蠢话。 符号主义（逻辑主义） 推理期 二十世纪五十年代到七十年代初，人工智能的研究处于“推理期”，那时候人们普遍认为机器获得智能的方法是赋予机器逻辑推理的能力。该阶段比较有代表的工作比如在1955年12月，赫伯特·西蒙（Herbert Simon）和艾伦·纽厄尔（Allen Newell）开发出逻辑理论家，这是世界上第一个人工智能程序，有能力证明罗素和怀特海《数学原理》第二章52个定理中的38个定理， 甚至在后来证明了全部52个定理。这两位也因此在1975年获得了图灵奖。
 知识期 随着后来的研究进展，人们意识到仅仅具有逻辑推理能力是远远无法实现人工智能的。从二十世纪七十年代中期开始，人工智能的研究进入知识期。专家系统被大量开发出来，E.A. Feigenbaum 作为“知识工程”之父在1994年获得图灵奖。不过后来人们又意识到专家系统的“知识工程瓶颈”，把人类总结的知识教授给计算机是相当困难的。
 机器学习 八十年代左右，“从样例中学习”的一大主流还是符号主义的思想，其代表如决策树（Decision tree）和基于逻辑的学习。决策树以信息论为基础，而基于逻辑的学习是归纳逻辑程序设计，可看作是机器学习与逻辑程序设计的交叉。
@@ -36,10 +36,10 @@
     
     <item>
       <title>暑假机器学习总结</title>
-      <link>http://example.com/blog/posts/%E6%9A%91%E5%81%87%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</link>
+      <link>/blog/posts/%E6%9A%91%E5%81%87%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</link>
       <pubDate>Wed, 13 Sep 2017 20:49:32 +0000</pubDate>
       
-      <guid>http://example.com/blog/posts/%E6%9A%91%E5%81%87%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</guid>
+      <guid>/blog/posts/%E6%9A%91%E5%81%87%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</guid>
       <description>机器学习学习总结 经过两个月的学习，从对机器学习一点点懵懂认知，到现在对机器学习的基础知识跟体系有一定的认知。如今学习暂告一段落，总结如今学习过的重点知识，可以起到很好的复习作业，也是对两个月以来的交代。以下，我将按照每周学习进度来总结回顾机器学习的知识。
 第一周 我们先学习了python编程基础，之后的学习是基于python各种库来实验的。我之前已经比较熟悉python，所以很快就完成这段学习；之后接触numpy，这是C语言为python编写的底层矩阵库，我之前也接触过，但比较浅，不过numpy封装的很好，用起来门槛也很低，很快就上手了；numpy之后就是pandas,它是数据分析常用的库，基于numpy，非常全面，我之前也用过，但基本需要重新学习，pandas比较难用，尤其是IO部分，有细粒度的操作，文档看起来也比较麻烦，没有示例，所以学习的过程中，是遇到问题再去查找方法，后面的学习pandas其实用到的也比较少。
 以上内容大概花了两天，算是对机器学习的预备知识的准备。当然期间也学习了简单的使用anaconda，jupyter等工具，不再一一总结了。
@@ -67,10 +67,10 @@
     
     <item>
       <title>机器学习里的一些小概念</title>
-      <link>http://example.com/blog/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E9%87%8C%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E6%A6%82%E5%BF%B5/</link>
+      <link>/blog/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E9%87%8C%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E6%A6%82%E5%BF%B5/</link>
       <pubDate>Thu, 10 Aug 2017 13:53:56 +0000</pubDate>
       
-      <guid>http://example.com/blog/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E9%87%8C%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E6%A6%82%E5%BF%B5/</guid>
+      <guid>/blog/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E9%87%8C%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E6%A6%82%E5%BF%B5/</guid>
       <description> 机器学习里的一些小概念 轮廓系数 轮廓系数（Silhouette Coefficient），是聚类效果好坏的一种评价方式。最早由 Peter J. Rousseeuw 在 1986 提出。 它结合内聚度和分离度两种因素。可以用来在相同原始数据的基础上用来评价不同算法、或者算法不同运行方式对聚类结果所产生的影响。
 计算过程 假设我们已经通过一定算法，将待分类数据进行了聚类。 常用的比如使用K-means，将待分类数据分为了k个簇。 对于簇中的每个向量。分别计算它们的轮廓系数。 对于其中的一个点 i 来说：
  计算 a(i) = average(i向量到所有它属于的簇中其它点的距离) 计算 b(i) = min(i向量到所有其他簇的点的平均距离)  那么i向量轮廓系数就为： {% raw %} $$ S(i) = \frac{b(i) - a(i)}{max{a(i), b(i)}} $$ {% endraw %}
@@ -80,10 +80,10 @@
     
     <item>
       <title>k-means</title>
-      <link>http://example.com/blog/posts/k-means/</link>
+      <link>/blog/posts/k-means/</link>
       <pubDate>Tue, 08 Aug 2017 16:18:09 +0000</pubDate>
       
-      <guid>http://example.com/blog/posts/k-means/</guid>
+      <guid>/blog/posts/k-means/</guid>
       <description>公式排版目前没法解决唉，博客写个数学公式怎么这么揪心，好不容易解决了公式显示问题，但排版又很难控制
 k-means 基本原理 这个星期学无监督学习(unsuperviser-learning), 最基本的是k-means算法. k-means属于原型聚类:假设聚类结构能通过一组原型刻画. 而聚类本身是根据数据相似度来划分的,即&amp;rdquo;距离&amp;rdquo;.我这里不展开讲距离计算, 姑且用欧几里德距离来理解，即平时最常见的公式. {% raw %}
 我们先写出k-means的最小化平方误差: 给定样本集合 $D = {x_1, x_2, \dots, x_m}$,

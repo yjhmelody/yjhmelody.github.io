@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Clusters on Minimal</title>
-    <link>http://example.com/tags/clusters/</link>
+    <link>/tags/clusters/</link>
     <description>Recent content in Clusters on Minimal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 08 Aug 2017 16:18:09 +0000</lastBuildDate>
     
-	<atom:link href="http://example.com/tags/clusters/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/clusters/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>k-means</title>
-      <link>http://example.com/blog/posts/k-means/</link>
+      <link>/blog/posts/k-means/</link>
       <pubDate>Tue, 08 Aug 2017 16:18:09 +0000</pubDate>
       
-      <guid>http://example.com/blog/posts/k-means/</guid>
+      <guid>/blog/posts/k-means/</guid>
       <description>公式排版目前没法解决唉，博客写个数学公式怎么这么揪心，好不容易解决了公式显示问题，但排版又很难控制
 k-means 基本原理 这个星期学无监督学习(unsuperviser-learning), 最基本的是k-means算法. k-means属于原型聚类:假设聚类结构能通过一组原型刻画. 而聚类本身是根据数据相似度来划分的,即&amp;rdquo;距离&amp;rdquo;.我这里不展开讲距离计算, 姑且用欧几里德距离来理解，即平时最常见的公式. {% raw %}
 我们先写出k-means的最小化平方误差: 给定样本集合 $D = {x_1, x_2, \dots, x_m}$,

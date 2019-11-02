@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Database on Minimal</title>
-    <link>http://example.com/tags/database/</link>
+    <link>/tags/database/</link>
     <description>Recent content in Database on Minimal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 26 Oct 2017 13:30:18 +0000</lastBuildDate>
     
-	<atom:link href="http://example.com/tags/database/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/database/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Install MySQL5.7</title>
-      <link>http://example.com/blog/posts/install-mysql5-7/</link>
+      <link>/blog/posts/install-mysql5-7/</link>
       <pubDate>Thu, 26 Oct 2017 13:30:18 +0000</pubDate>
       
-      <guid>http://example.com/blog/posts/install-mysql5-7/</guid>
+      <guid>/blog/posts/install-mysql5-7/</guid>
       <description>大二数据库原理的作业，发现还存在电脑里，于是稍微整理下放到博客里。
 windows下mysql安装 我下载的是zip压缩包，假设解压到D:\software目录下，官网下载的只有服务端和简单的shell，可以去搜索Navicat客户端，支持多种数据库管理系统，下载MySQL客户端，也支持MariaDB使用。
 注意：Navicat是收费的，免费使用14天。你还可以使用其他客户端，比如phpAdminMySQL。
