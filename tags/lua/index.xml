@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lua on MY LIFE</title>
@@ -21,9 +21,9 @@
 于是乎，还是打算手写。考虑到Lua本身文法少，手写代码量不会多上几百行；自己之前也没有实现一个比较满意的解析器；如果用语法生成生成器，首先还得学，然后得花时间改写文法，有点得不偿失。
 词法 首先随便写了点词法这块，发现我抽象能力太弱了，本来想多用第三方库实现更抽象性能更好的词法分析类，但我有点不太熟悉泛型编程，而且前期具体工作不明确，写了很大概率后面要改。于是乎，就是很粗糙地使用了String类型。而对于具体的词法分析，感觉写过很多次，每次套路都写的不一样，参考别人的实现，也都是五花八门，我也没法判断哪种够优雅。而对于Lua语言，毕竟是工业级语言，词法分析实现细节一定要参考书或官方文档，语法细节非常多。
 先从AST开始 果然了解一门语言除了常见的语法特性见识了以外，看文法和AST感觉也不错。不过我个人对文法不太感兴趣，也不太擅长，而AST可以看清楚这个语言的很多语义。 下面整理一下Lua的AST，可能设计的一般般，以后肯定还需要改动。下面我只列出AST，而不写出文法。
-#[derive(Debug)] pub struct Block { last_line: Line, stats: Vec&amp;lt;Stat&amp;gt;, ret_exps: Vec&amp;lt;Exp&amp;gt;, }  Block，或 Chunk，是Lua最小编译单位。Lua解释器通过传递Block给编译器，生成字节码后解释执行。Block必须包含语句和返回值，当然返回值可以有多个，而且可以是表达式，这个很自然。
+#[derive(Debug)] pub struct Block { last_line: Line, stats: Vec&amp;lt;Stat&amp;gt;, ret_exps: Vec&amp;lt;Exp&amp;gt;, } Block，或 Chunk，是Lua最小编译单位。Lua解释器通过传递Block给编译器，生成字节码后解释执行。Block必须包含语句和返回值，当然返回值可以有多个，而且可以是表达式，这个很自然。
 接下来的 Stat有点长，它表示Lua的语句(statment)。语句包括了表达式(expression)的结构，这跟许多静态语言不一样所以会比较长，但这也是它的主体了。 仔细一看，Stat也只有几个流程控制，赋值（包括变量定义），函数定义，无他。写过一点lua就知道，lua没有哪些地方的代码需要提升(lift)，都是在解释时进入到环境的。
-#[derive(Debug)] pub enum Stat { Empty, Break { line: Line, }, Label { name: String, }, Goto { name: String, }, Do { block: Box&amp;lt;Block&amp;gt;, }, While { exp: Exp, block: Box&amp;lt;Block&amp;gt;, }, Repeat { exp: Exp, block: Box&amp;lt;Block&amp;gt;, }, If { exps: Vec&amp;lt;Exp&amp;gt;, blocks: Vec&amp;lt;Block&amp;gt;, }, ForNum { line_of_for: Line, line_of_do: Line, var_name: String, exps: (Exp, Exp, Exp), block: Box&amp;lt;Block&amp;gt;, }, ForIn { line_of_do: Line, name_list: Vec&amp;lt;String&amp;gt;, exp_list: Vec&amp;lt;Exp&amp;gt;, block: Box&amp;lt;Block&amp;gt;, }, LocalVarDecl { last_line: Line, name_list: Vec&amp;lt;String&amp;gt;, exp_list: Vec&amp;lt;Exp&amp;gt;, }, Assign { last_line: Line, var_list: Vec&amp;lt;Exp&amp;gt;, exp_list: Vec&amp;lt;Exp&amp;gt;, }, LocalFnDef { name: String, exp: Box&amp;lt;Exp&amp;gt;, }, }  写到这里，说实话好像讲AST没什么意思，于是下面这个也没什么好总结了。不过要注意好一些值的限定，虽然有些地方使用了Exp，但是其实里面用的枚举值是固定的， 其实可以提出来单独定义。我为了整体的简洁性，就没这样做。在后面的实现中，应该对性能和代码量有一定影响，不过到时候改也不迟。 这里有个不好的地方就是Line几乎都用到了，为什么不封装一下呢？主要是还是为了简单而多了样板代码，到后期写的时候不会因为类型过多而处理麻烦。</description>
+#[derive(Debug)] pub enum Stat { Empty, Break { line: Line, }, Label { name: String, }, Goto { name: String, }, Do { block: Box&amp;lt;Block&amp;gt;, }, While { exp: Exp, block: Box&amp;lt;Block&amp;gt;, }, Repeat { exp: Exp, block: Box&amp;lt;Block&amp;gt;, }, If { exps: Vec&amp;lt;Exp&amp;gt;, blocks: Vec&amp;lt;Block&amp;gt;, }, ForNum { line_of_for: Line, line_of_do: Line, var_name: String, exps: (Exp, Exp, Exp), block: Box&amp;lt;Block&amp;gt;, }, ForIn { line_of_do: Line, name_list: Vec&amp;lt;String&amp;gt;, exp_list: Vec&amp;lt;Exp&amp;gt;, block: Box&amp;lt;Block&amp;gt;, }, LocalVarDecl { last_line: Line, name_list: Vec&amp;lt;String&amp;gt;, exp_list: Vec&amp;lt;Exp&amp;gt;, }, Assign { last_line: Line, var_list: Vec&amp;lt;Exp&amp;gt;, exp_list: Vec&amp;lt;Exp&amp;gt;, }, LocalFnDef { name: String, exp: Box&amp;lt;Exp&amp;gt;, }, } 写到这里，说实话好像讲AST没什么意思，于是下面这个也没什么好总结了。不过要注意好一些值的限定，虽然有些地方使用了Exp，但是其实里面用的枚举值是固定的， 其实可以提出来单独定义。我为了整体的简洁性，就没这样做。在后面的实现中，应该对性能和代码量有一定影响，不过到时候改也不迟。 这里有个不好的地方就是Line几乎都用到了，为什么不封装一下呢？主要是还是为了简单而多了样板代码，到后期写的时候不会因为类型过多而处理麻烦。</description>
     </item>
     
     <item>
@@ -35,9 +35,10 @@
       <description>Lua Lua一览 Lua 是一门基于 table 的编程语言，它的核心抽象层简单而强大，你可以用它实现过程式、面向对象、事件驱动等。 Lua 的 table 很适合基于原型的面向对象编程。这种编程风格中，类和实例不是割裂的概念。你先创建一个实例，这个实例看起来像你需要的对象。然后你再把这个实例复制多份，对每一份做一些定制化。
 初窥 Lua 的语法友好，并且易于接近，无须担心分号或者空格写哪里。空格对 Lua 来说不太重要，两个语句之间甚至不需要换行。Lua 使用 &amp;ndash; 来注释。
 以下示例主要在REPL中运行。
-&amp;gt; print &amp;quot;hello world&amp;quot; hello world &amp;gt; print &amp;quot;hello world&amp;quot; &amp;gt; print &amp;quot;hello world&amp;quot; print &amp;quot;hello world&amp;quot;  Lua 基础 Lua 是动态类型的，也就是说代码中的变量不需要声明类型，在运行时才会决定其具体类型。Lua 的基础类型有： - 数字 - 布尔值 - 字符串
-&amp;gt; 3.14 3.14 &amp;gt; true true &amp;gt; &amp;quot;hello world&amp;quot; hello world &amp;gt;  Lua 没有整数，就跟 JS 一样。字符串也可以使用单引号，也使用反斜杠转义特殊字符或不可见字符。
-字符串可以用 .. 来拼接，用 # 来获取长度。</description>
+&amp;gt; print &amp;#34;hello world&amp;#34; hello world &amp;gt; print &amp;#34;hello world&amp;#34; &amp;gt; print &amp;#34;hello world&amp;#34; print &amp;#34;hello world&amp;#34; Lua 基础 Lua 是动态类型的，也就是说代码中的变量不需要声明类型，在运行时才会决定其具体类型。Lua 的基础类型有：
+ 数字 布尔值 字符串  &amp;gt; 3.14 3.14 &amp;gt; true true &amp;gt; &amp;#34;hello world&amp;#34; hello world &amp;gt; Lua 没有整数，就跟 JS 一样。字符串也可以使用单引号，也使用反斜杠转义特殊字符或不可见字符。
+字符串可以用 .. 来拼接，用 # 来获取长度。
+&amp;gt; &amp;#34;hello\t&amp;#34; .. &amp;#34;world&amp;#34; hello world &amp;gt; # &amp;#34;hello&amp;#34; 5 在 Lua 中，nil 有自己的类型，它表示找不到或者不存在。</description>
     </item>
     
   </channel>

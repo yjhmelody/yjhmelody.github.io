@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rust on MY LIFE</title>
@@ -21,9 +21,9 @@
 于是乎，还是打算手写。考虑到Lua本身文法少，手写代码量不会多上几百行；自己之前也没有实现一个比较满意的解析器；如果用语法生成生成器，首先还得学，然后得花时间改写文法，有点得不偿失。
 词法 首先随便写了点词法这块，发现我抽象能力太弱了，本来想多用第三方库实现更抽象性能更好的词法分析类，但我有点不太熟悉泛型编程，而且前期具体工作不明确，写了很大概率后面要改。于是乎，就是很粗糙地使用了String类型。而对于具体的词法分析，感觉写过很多次，每次套路都写的不一样，参考别人的实现，也都是五花八门，我也没法判断哪种够优雅。而对于Lua语言，毕竟是工业级语言，词法分析实现细节一定要参考书或官方文档，语法细节非常多。
 先从AST开始 果然了解一门语言除了常见的语法特性见识了以外，看文法和AST感觉也不错。不过我个人对文法不太感兴趣，也不太擅长，而AST可以看清楚这个语言的很多语义。 下面整理一下Lua的AST，可能设计的一般般，以后肯定还需要改动。下面我只列出AST，而不写出文法。
-#[derive(Debug)] pub struct Block { last_line: Line, stats: Vec&amp;lt;Stat&amp;gt;, ret_exps: Vec&amp;lt;Exp&amp;gt;, }  Block，或 Chunk，是Lua最小编译单位。Lua解释器通过传递Block给编译器，生成字节码后解释执行。Block必须包含语句和返回值，当然返回值可以有多个，而且可以是表达式，这个很自然。
+#[derive(Debug)] pub struct Block { last_line: Line, stats: Vec&amp;lt;Stat&amp;gt;, ret_exps: Vec&amp;lt;Exp&amp;gt;, } Block，或 Chunk，是Lua最小编译单位。Lua解释器通过传递Block给编译器，生成字节码后解释执行。Block必须包含语句和返回值，当然返回值可以有多个，而且可以是表达式，这个很自然。
 接下来的 Stat有点长，它表示Lua的语句(statment)。语句包括了表达式(expression)的结构，这跟许多静态语言不一样所以会比较长，但这也是它的主体了。 仔细一看，Stat也只有几个流程控制，赋值（包括变量定义），函数定义，无他。写过一点lua就知道，lua没有哪些地方的代码需要提升(lift)，都是在解释时进入到环境的。
-#[derive(Debug)] pub enum Stat { Empty, Break { line: Line, }, Label { name: String, }, Goto { name: String, }, Do { block: Box&amp;lt;Block&amp;gt;, }, While { exp: Exp, block: Box&amp;lt;Block&amp;gt;, }, Repeat { exp: Exp, block: Box&amp;lt;Block&amp;gt;, }, If { exps: Vec&amp;lt;Exp&amp;gt;, blocks: Vec&amp;lt;Block&amp;gt;, }, ForNum { line_of_for: Line, line_of_do: Line, var_name: String, exps: (Exp, Exp, Exp), block: Box&amp;lt;Block&amp;gt;, }, ForIn { line_of_do: Line, name_list: Vec&amp;lt;String&amp;gt;, exp_list: Vec&amp;lt;Exp&amp;gt;, block: Box&amp;lt;Block&amp;gt;, }, LocalVarDecl { last_line: Line, name_list: Vec&amp;lt;String&amp;gt;, exp_list: Vec&amp;lt;Exp&amp;gt;, }, Assign { last_line: Line, var_list: Vec&amp;lt;Exp&amp;gt;, exp_list: Vec&amp;lt;Exp&amp;gt;, }, LocalFnDef { name: String, exp: Box&amp;lt;Exp&amp;gt;, }, }  写到这里，说实话好像讲AST没什么意思，于是下面这个也没什么好总结了。不过要注意好一些值的限定，虽然有些地方使用了Exp，但是其实里面用的枚举值是固定的， 其实可以提出来单独定义。我为了整体的简洁性，就没这样做。在后面的实现中，应该对性能和代码量有一定影响，不过到时候改也不迟。 这里有个不好的地方就是Line几乎都用到了，为什么不封装一下呢？主要是还是为了简单而多了样板代码，到后期写的时候不会因为类型过多而处理麻烦。</description>
+#[derive(Debug)] pub enum Stat { Empty, Break { line: Line, }, Label { name: String, }, Goto { name: String, }, Do { block: Box&amp;lt;Block&amp;gt;, }, While { exp: Exp, block: Box&amp;lt;Block&amp;gt;, }, Repeat { exp: Exp, block: Box&amp;lt;Block&amp;gt;, }, If { exps: Vec&amp;lt;Exp&amp;gt;, blocks: Vec&amp;lt;Block&amp;gt;, }, ForNum { line_of_for: Line, line_of_do: Line, var_name: String, exps: (Exp, Exp, Exp), block: Box&amp;lt;Block&amp;gt;, }, ForIn { line_of_do: Line, name_list: Vec&amp;lt;String&amp;gt;, exp_list: Vec&amp;lt;Exp&amp;gt;, block: Box&amp;lt;Block&amp;gt;, }, LocalVarDecl { last_line: Line, name_list: Vec&amp;lt;String&amp;gt;, exp_list: Vec&amp;lt;Exp&amp;gt;, }, Assign { last_line: Line, var_list: Vec&amp;lt;Exp&amp;gt;, exp_list: Vec&amp;lt;Exp&amp;gt;, }, LocalFnDef { name: String, exp: Box&amp;lt;Exp&amp;gt;, }, } 写到这里，说实话好像讲AST没什么意思，于是下面这个也没什么好总结了。不过要注意好一些值的限定，虽然有些地方使用了Exp，但是其实里面用的枚举值是固定的， 其实可以提出来单独定义。我为了整体的简洁性，就没这样做。在后面的实现中，应该对性能和代码量有一定影响，不过到时候改也不迟。 这里有个不好的地方就是Line几乎都用到了，为什么不封装一下呢？主要是还是为了简单而多了样板代码，到后期写的时候不会因为类型过多而处理麻烦。</description>
     </item>
     
   </channel>

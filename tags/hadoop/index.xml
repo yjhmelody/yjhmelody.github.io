@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hadoop on MY LIFE</title>
@@ -22,7 +22,7 @@ Required software for Linux include:
 Java™ must be installed. Recommended Java versions are described at HadoopJavaVersions.
 ssh must be installed and sshd must be running to use the Hadoop scripts that manage remote Hadoop daemons.
 Installing Software 以下是必需的软件。
-$ sudo apt-get install ssh $ sudo apt-get install rsync  Download To get a Hadoop distribution, download a recent stable release from one of the Apache Download Mirrors.</description>
+$ sudo apt-get install ssh $ sudo apt-get install rsync Download To get a Hadoop distribution, download a recent stable release from one of the Apache Download Mirrors.</description>
     </item>
     
   </channel>

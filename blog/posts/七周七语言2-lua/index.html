@@ -70,7 +70,7 @@
 
 
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.58.2" />
+ <meta name="generator" content="Hugo 0.61.0" />
         
 
         
@@ -141,644 +141,515 @@
 
     </div>
 
-    <div align="start" class="content">
-
-<h1 id="lua">Lua</h1>
-
-<h2 id="lua一览">Lua一览</h2>
-
+    <div align="start" class="content"><h1 id="lua">Lua</h1>
+<h2 id="lua-1">Lua一览</h2>
 <p>Lua 是一门基于 table 的编程语言，它的核心抽象层简单而强大，你可以用它实现过程式、面向对象、事件驱动等。
 Lua 的 table 很适合基于原型的面向对象编程。这种编程风格中，类和实例不是割裂的概念。你先创建一个实例，这个实例看起来像你需要的对象。然后你再把这个实例复制多份，对每一份做一些定制化。</p>
-
-<!-- more -->
-
-<h2 id="初窥">初窥</h2>
-
+<!-- raw HTML omitted -->
+<h2 id="heading">初窥</h2>
 <p>Lua 的语法友好，并且易于接近，无须担心分号或者空格写哪里。空格对 Lua 来说不太重要，两个语句之间甚至不需要换行。Lua 使用 &ndash; 来注释。</p>
-
 <p>以下示例主要在REPL中运行。</p>
-
-<pre><code class="language-lua">&gt; print &quot;hello world&quot;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#f92672">&gt;</span> print <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">hello world</span><span style="color:#e6db74">&#34;</span>
 hello world
-&gt; print
-&quot;hello world&quot;
-&gt; print &quot;hello world&quot; print &quot;hello world&quot;
-</code></pre>
-
-<h2 id="lua-基础">Lua 基础</h2>
-
-<p>Lua 是动态类型的，也就是说代码中的变量不需要声明类型，在运行时才会决定其具体类型。Lua 的基础类型有：
-- 数字
-- 布尔值
-- 字符串</p>
-
-<pre><code class="language-lua">&gt; 3.14
-3.14
-&gt; true
-true
-&gt; &quot;hello world&quot;
+<span style="color:#f92672">&gt;</span> print
+<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">hello world</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#f92672">&gt;</span> print <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">hello world</span><span style="color:#e6db74">&#34;</span> print <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">hello world</span><span style="color:#e6db74">&#34;</span>
+</code></pre></div><h2 id="lua-">Lua 基础</h2>
+<p>Lua 是动态类型的，也就是说代码中的变量不需要声明类型，在运行时才会决定其具体类型。Lua 的基础类型有：</p>
+<ul>
+<li>数字</li>
+<li>布尔值</li>
+<li>字符串</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">3.14</span>
+<span style="color:#ae81ff">3.14</span>
+<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">true</span>
+<span style="color:#66d9ef">true</span>
+<span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">hello world</span><span style="color:#e6db74">&#34;</span>
 hello world
-&gt;
-</code></pre>
-
-<p>Lua 没有整数，就跟 JS 一样。字符串也可以使用单引号，也使用反斜杠转义特殊字符或不可见字符。</p>
-
+<span style="color:#f92672">&gt;</span>
+</code></pre></div><p>Lua 没有整数，就跟 JS 一样。字符串也可以使用单引号，也使用反斜杠转义特殊字符或不可见字符。</p>
 <p>字符串可以用 <code>..</code> 来拼接，用 <code>#</code> 来获取长度。</p>
-
-<pre><code class="language-lua">&gt; &quot;hello\t&quot; .. &quot;world&quot;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">hello</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">..</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">world</span><span style="color:#e6db74">&#34;</span>
 hello   world
 
-&gt; # &quot;hello&quot;
-5
-</code></pre>
-
-<p>在 Lua 中，nil 有自己的类型，它表示找不到或者不存在。</p>
-
-<pre><code class="language-lua">&gt; some_func
-nil
-</code></pre>
-
-<h2 id="表达式">表达式</h2>
-
+<span style="color:#f92672">&gt;</span> <span style="color:#f92672">#</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">hello</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#ae81ff">5</span>
+</code></pre></div><p>在 Lua 中，nil 有自己的类型，它表示找不到或者不存在。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#f92672">&gt;</span> some_func
+<span style="color:#66d9ef">nil</span>
+</code></pre></div><h2 id="heading-1">表达式</h2>
 <p>Lua 里的数学表达式和其他语言差不多。</p>
-
-<pre><code class="language-lua">&gt; 6 + 5 * 4 - 3 / 2
-24.5
-&gt; 6 + (5 * 4) - (3 / 2)
-24.5
-&gt; (6 + 5) * (4 - 3) / 2
-5.5
-</code></pre>
-
-<p>Lua 的布尔操作是用 <code>and</code> <code>or</code> <code>not</code> 三个关键字。Lua 的逻辑表达式也是会短路的。Lua 里布尔操作跟JS里的类似。
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">6</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>
+<span style="color:#ae81ff">24.5</span>
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">6</span> <span style="color:#f92672">+</span> (<span style="color:#ae81ff">5</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>) <span style="color:#f92672">-</span> (<span style="color:#ae81ff">3</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>)
+<span style="color:#ae81ff">24.5</span>
+<span style="color:#f92672">&gt;</span> (<span style="color:#ae81ff">6</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">5</span>) <span style="color:#f92672">*</span> (<span style="color:#ae81ff">4</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">3</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>
+<span style="color:#ae81ff">5.5</span>
+</code></pre></div><p>Lua 的布尔操作是用 <code>and</code> <code>or</code> <code>not</code> 三个关键字。Lua 的逻辑表达式也是会短路的。Lua 里布尔操作跟JS里的类似。
 <code>==</code> <code>~=</code> 用来比较任意值相等或者不相等。<code>&lt;</code> <code>&gt;</code> <code>&lt;=</code> <code>&gt;=</code> 只对字符串和数字适用。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">true</span> <span style="color:#f92672">or</span> <span style="color:#ae81ff">1</span>
+<span style="color:#66d9ef">true</span>
+<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">true</span> <span style="color:#f92672">and</span> <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">1</span>
+<span style="color:#f92672">&gt;</span> <span style="color:#f92672">not</span> <span style="color:#ae81ff">1</span>
+<span style="color:#66d9ef">false</span>
+<span style="color:#f92672">&gt;</span> <span style="color:#f92672">not</span> <span style="color:#ae81ff">0</span>
+<span style="color:#66d9ef">false</span>
+<span style="color:#f92672">&gt;</span> <span style="color:#f92672">not</span> <span style="color:#66d9ef">false</span>
+<span style="color:#66d9ef">true</span>
 
-<pre><code class="language-lua">&gt; true or 1
-true
-&gt; true and 1
-1
-&gt; not 1
-false
-&gt; not 0
-false
-&gt; not false
-true
-
-&gt; &quot;hello&quot; == &quot;world&quot;
-false
-&gt; &quot;hello&quot; ~= &quot;world&quot;
-true
-&gt; &quot;hello&quot; &lt;= &quot;world&quot;
-true
-&gt; &quot;hello&quot; &gt; &quot;world&quot;
-false
-</code></pre>
-
-<h2 id="函数">函数</h2>
-
+<span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">hello</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">world</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">false</span>
+<span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">hello</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">~=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">world</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">true</span>
+<span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">hello</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">world</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">true</span>
+<span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">hello</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">world</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">false</span>
+</code></pre></div><h2 id="heading-2">函数</h2>
 <p>Lua 的函数定义看起来和其他常见脚本语言类似，如JS.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">triple</span>(num)
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> num
+<span style="color:#66d9ef">end</span>
 
-<pre><code class="language-lua">function triple(num)
-    return 3 * num
-end
-
--- 函数名字不是必须的
-(function(num) return 3 * num end)(2)
-</code></pre>
-
-<p>在 Lua 的世界里，函数是一等公民。可以跟其他值一样用于赋值和传递参数。</p>
-
-<h3 id="灵活的参数">灵活的参数</h3>
-
+<span style="color:#75715e">-- 函数名字不是必须的</span>
+(<span style="color:#66d9ef">function</span>(num) <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> num <span style="color:#66d9ef">end</span>)(<span style="color:#ae81ff">2</span>)
+</code></pre></div><p>在 Lua 的世界里，函数是一等公民。可以跟其他值一样用于赋值和传递参数。</p>
+<h3 id="heading-3">灵活的参数</h3>
 <p>调用函数的时候，传入的参数个数不一致时，未传入的参数赋值为nil，多余的参数则被忽略掉。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">print_three</span>(a, b, c)
+<span style="color:#f92672">&gt;&gt;</span>     print(a)
+<span style="color:#f92672">&gt;&gt;</span>     print(b)
+<span style="color:#f92672">&gt;&gt;</span>     print(c)
+<span style="color:#f92672">&gt;&gt;</span> <span style="color:#66d9ef">end</span>
 
-<pre><code class="language-lua">&gt; function print_three(a, b, c)
-&gt;&gt;     print(a)
-&gt;&gt;     print(b)
-&gt;&gt;     print(c)
-&gt;&gt; end
+<span style="color:#f92672">&gt;</span> print_three(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>)
+<span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">2</span>
+<span style="color:#66d9ef">nil</span>
 
-&gt; print_three(1, 2)
-1
-2
-nil
+<span style="color:#f92672">&gt;</span> print_three(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>)
+<span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">2</span>
+<span style="color:#ae81ff">3</span>
+</code></pre></div><p>可以把最后一个参数标为 <code>...</code> 来表示不定参数。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">print_char</span>(a, ...)
+<span style="color:#f92672">&gt;&gt;</span>     print(a)
+<span style="color:#f92672">&gt;&gt;</span>     b <span style="color:#f92672">=</span> {...}
+<span style="color:#f92672">&gt;&gt;</span>     print(b[<span style="color:#ae81ff">1</span>])
+<span style="color:#f92672">&gt;&gt;</span>     print(b[<span style="color:#ae81ff">2</span>])
+<span style="color:#f92672">&gt;&gt;</span> <span style="color:#66d9ef">end</span>
 
-&gt; print_three(1, 2, 3, 4)
-1
-2
-3
-</code></pre>
-
-<p>可以把最后一个参数标为 <code>...</code> 来表示不定参数。</p>
-
-<pre><code class="language-lua">&gt; function print_char(a, ...)
-&gt;&gt;     print(a)
-&gt;&gt;     b = {...}
-&gt;&gt;     print(b[1])
-&gt;&gt;     print(b[2])
-&gt;&gt; end
-
-&gt; print_char(&quot;hello&quot;)
+<span style="color:#f92672">&gt;</span> print_char(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">hello</span><span style="color:#e6db74">&#34;</span>)
 hello
-nil
-nil
+<span style="color:#66d9ef">nil</span>
+<span style="color:#66d9ef">nil</span>
 
-&gt; print_char(&quot;hello&quot;, &quot;world&quot;)
+<span style="color:#f92672">&gt;</span> print_char(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">hello</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">world</span><span style="color:#e6db74">&#34;</span>)
 hello
 w
-nil
+<span style="color:#66d9ef">nil</span>
 
-&gt; print_char(&quot;hello&quot;, &quot;world&quot;, &quot;你好&quot;)
+<span style="color:#f92672">&gt;</span> print_char(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">hello</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">world</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">你好</span><span style="color:#e6db74">&#34;</span>)
 hello
 world
-你好
-</code></pre>
-
-<p>Lua 的函数会做尾递归优化。和参数类似，函数的返回值可以有多个，你可以选择使用所有返回值，或者忽略一些。</p>
-
-<pre><code class="language-lua">&gt; function return_two()
-&gt;&gt;     return &quot;hello&quot;, &quot;world&quot;
-&gt;&gt; end
-&gt;
-&gt; a = return_two()
-&gt;
-&gt; x, y = return_two()
-&gt; a
+<span style="color:#960050;background-color:#1e0010">你</span><span style="color:#960050;background-color:#1e0010">好</span>
+</code></pre></div><p>Lua 的函数会做尾递归优化。和参数类似，函数的返回值可以有多个，你可以选择使用所有返回值，或者忽略一些。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">return_two</span>()
+<span style="color:#f92672">&gt;&gt;</span>     <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">hello</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">world</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#f92672">&gt;&gt;</span> <span style="color:#66d9ef">end</span>
+<span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&gt;</span> a <span style="color:#f92672">=</span> return_two()
+<span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&gt;</span> x, y <span style="color:#f92672">=</span> return_two()
+<span style="color:#f92672">&gt;</span> a
 hello
-&gt; x
+<span style="color:#f92672">&gt;</span> x
 hello
-&gt; y
+<span style="color:#f92672">&gt;</span> y
 world
 
-&gt; a,b,c = return_two()
-&gt; a
+<span style="color:#f92672">&gt;</span> a,b,c <span style="color:#f92672">=</span> return_two()
+<span style="color:#f92672">&gt;</span> a
 hello
-&gt; b
+<span style="color:#f92672">&gt;</span> b
 world
-&gt; c
-nil
-</code></pre>
-
-<h2 id="具名参数">具名参数</h2>
-
+<span style="color:#f92672">&gt;</span> c
+<span style="color:#66d9ef">nil</span>
+</code></pre></div><h2 id="heading-4">具名参数</h2>
 <p>Lua 不像 python 和 ruby 在语法层面上支持具名函数。不过你可以通过把 table 当作参数来获得类似的效果。</p>
-
-<pre><code class="language-lua">&gt; function print_prices(table)
-&gt;&gt;     print(&quot;The clothes costs &quot; .. table.medium)
-&gt;&gt; end
-&gt;
-&gt; print_prices{small=5.0, medium=7.0}
-The clothes costs 7.0
-</code></pre>
-
-<h2 id="控制流程">控制流程</h2>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">print_prices</span>(table)
+<span style="color:#f92672">&gt;&gt;</span>     print(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">The clothes costs </span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">..</span> table.medium)
+<span style="color:#f92672">&gt;&gt;</span> <span style="color:#66d9ef">end</span>
+<span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&gt;</span> print_prices{small<span style="color:#f92672">=</span><span style="color:#ae81ff">5.0</span>, medium<span style="color:#f92672">=</span><span style="color:#ae81ff">7.0</span>}
+The clothes costs <span style="color:#ae81ff">7.0</span>
+</code></pre></div><h2 id="heading-5">控制流程</h2>
 <p>Lua 内建的流程控制有 if 语句，两种 for 循环和 while 循环。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#f92672">&gt;</span> score <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span>
+<span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">if</span> score <span style="color:#f92672">==</span> <span style="color:#ae81ff">10</span> <span style="color:#66d9ef">then</span>
+<span style="color:#f92672">&gt;&gt;</span>     print <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">good</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#f92672">&gt;&gt;</span> <span style="color:#66d9ef">elseif</span> score <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">6</span> <span style="color:#66d9ef">then</span>
+<span style="color:#f92672">&gt;&gt;</span>     print <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">not bad</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#f92672">&gt;&gt;</span> <span style="color:#66d9ef">else</span>
+<span style="color:#f92672">&gt;&gt;</span>     print <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">terrible</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#f92672">&gt;&gt;</span> <span style="color:#66d9ef">end</span>
+<span style="color:#f92672">not</span> bad
 
-<pre><code class="language-lua">&gt; score = 7
-&gt;
-&gt; if score == 10 then
-&gt;&gt;     print &quot;good&quot;
-&gt;&gt; elseif score &gt;= 6 then
-&gt;&gt;     print &quot;not bad&quot;
-&gt;&gt; else
-&gt;&gt;     print &quot;terrible&quot;
-&gt;&gt; end
-not bad
-
-&gt; for i = 1, 3 do
-&gt;&gt;     print(i)
-&gt;&gt; end
-1
-2
-3
-&gt;
-&gt; for i = 1, 5, 2 do
-&gt;&gt;     print(i)
-&gt;&gt; end
-1
-3
-5
-</code></pre>
-
-<p>还可以用 for 循环来遍历集合，之后会讲。最后一种是 while 循环。</p>
-
-<pre><code class="language-lua">&gt; while math.random(100) &lt; 50 do
-&gt;&gt;     print(&quot;again&quot;)
-&gt;&gt; end
+<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span> <span style="color:#66d9ef">do</span>
+<span style="color:#f92672">&gt;&gt;</span>     print(i)
+<span style="color:#f92672">&gt;&gt;</span> <span style="color:#66d9ef">end</span>
+<span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">2</span>
+<span style="color:#ae81ff">3</span>
+<span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">2</span> <span style="color:#66d9ef">do</span>
+<span style="color:#f92672">&gt;&gt;</span>     print(i)
+<span style="color:#f92672">&gt;&gt;</span> <span style="color:#66d9ef">end</span>
+<span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">3</span>
+<span style="color:#ae81ff">5</span>
+</code></pre></div><p>还可以用 for 循环来遍历集合，之后会讲。最后一种是 while 循环。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">while</span> math.random(<span style="color:#ae81ff">100</span>) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">50</span> <span style="color:#66d9ef">do</span>
+<span style="color:#f92672">&gt;&gt;</span>     print(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">again</span><span style="color:#e6db74">&#34;</span>)
+<span style="color:#f92672">&gt;&gt;</span> <span style="color:#66d9ef">end</span>
 again
-</code></pre>
-
-<h2 id="变量">变量</h2>
-
+</code></pre></div><h2 id="heading-6">变量</h2>
 <p>Lua 的变量默认是全局的，需要使用 local 关键字来给局部变量声明。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">doubleMe</span>(a)
+<span style="color:#f92672">&gt;&gt;</span>     a2 <span style="color:#f92672">=</span> a <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>
+<span style="color:#f92672">&gt;&gt;</span>     <span style="color:#66d9ef">return</span> a2
+<span style="color:#f92672">&gt;&gt;</span> <span style="color:#66d9ef">end</span>
+<span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&gt;</span> doubleMe(<span style="color:#ae81ff">2</span>)
+<span style="color:#ae81ff">4</span>
+<span style="color:#f92672">&gt;</span> a2
+<span style="color:#ae81ff">4</span>
 
-<pre><code class="language-lua">&gt; function doubleMe(a)
-&gt;&gt;     a2 = a * 2
-&gt;&gt;     return a2
-&gt;&gt; end
-&gt;
-&gt; doubleMe(2)
-4
-&gt; a2
-4
-
-&gt; function doubleMe(a)
-&gt;&gt;     local a2 = a * 2
-&gt;&gt;     return a2
-&gt;&gt; end
-</code></pre>
-
-<h2 id="table-作为字典">table 作为字典</h2>
-
+<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">doubleMe</span>(a)
+<span style="color:#f92672">&gt;&gt;</span>     <span style="color:#66d9ef">local</span> a2 <span style="color:#f92672">=</span> a <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>
+<span style="color:#f92672">&gt;&gt;</span>     <span style="color:#66d9ef">return</span> a2
+<span style="color:#f92672">&gt;&gt;</span> <span style="color:#66d9ef">end</span>
+</code></pre></div><h2 id="table-">table 作为字典</h2>
 <p>和 JS 的 Object， Ruby 的哈希类似，Lua 的 table 是键值对的集合。通过大括号创建， 这种表达式叫做 table 构造器。（最后一个逗号可以省略）</p>
-
-<pre><code class="language-lua">-- create
-&gt; book = {
-&gt;&gt;     title = &quot;My story&quot;,
-&gt;&gt;     auther = &quot;yjh&quot;,
-&gt;&gt;     pages = 100
-&gt;&gt; }
-&gt;
-&gt; book
-table: 0276e1e0
--- get
-&gt; book[&quot;title&quot;]
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#75715e">-- create</span>
+<span style="color:#f92672">&gt;</span> book <span style="color:#f92672">=</span> {
+<span style="color:#f92672">&gt;&gt;</span>     title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">My story</span><span style="color:#e6db74">&#34;</span>,
+<span style="color:#f92672">&gt;&gt;</span>     auther <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">yjh</span><span style="color:#e6db74">&#34;</span>,
+<span style="color:#f92672">&gt;&gt;</span>     pages <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>
+<span style="color:#f92672">&gt;&gt;</span> }
+<span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&gt;</span> book
+table: <span style="color:#ae81ff">0276e1</span>e0
+<span style="color:#75715e">-- get</span>
+<span style="color:#f92672">&gt;</span> book[<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">title</span><span style="color:#e6db74">&#34;</span>]
 My story
--- add
-&gt; book.stars = 5
-&gt; book[0] = 1
-&gt; book[0]
-1
--- delete
-&gt; book.stars = nil
-&gt; book.stars
-nil
-</code></pre>
-
-<p>你可以使用任何类型的数据作为键：布尔，函数，table。</p>
-
+<span style="color:#75715e">-- add</span>
+<span style="color:#f92672">&gt;</span> book.stars <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+<span style="color:#f92672">&gt;</span> book[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+<span style="color:#f92672">&gt;</span> book[<span style="color:#ae81ff">0</span>]
+<span style="color:#ae81ff">1</span>
+<span style="color:#75715e">-- delete</span>
+<span style="color:#f92672">&gt;</span> book.stars <span style="color:#f92672">=</span> <span style="color:#66d9ef">nil</span>
+<span style="color:#f92672">&gt;</span> book.stars
+<span style="color:#66d9ef">nil</span>
+</code></pre></div><p>你可以使用任何类型的数据作为键：布尔，函数，table。</p>
 <p>Lua 并没有自带打印 table 的函数，需要自定义。</p>
-
-<pre><code class="language-lua">&gt; function print_table(t)
-&gt;&gt;     for k, v in pairs(t) do
-&gt;&gt;         print(k .. &quot;: &quot; .. v)
-&gt;&gt;     end
-&gt;&gt; end
-&gt;
-&gt; print_table(book)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">print_table</span>(t)
+<span style="color:#f92672">&gt;&gt;</span>     <span style="color:#66d9ef">for</span> k, v <span style="color:#66d9ef">in</span> pairs(t) <span style="color:#66d9ef">do</span>
+<span style="color:#f92672">&gt;&gt;</span>         print(k <span style="color:#f92672">..</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">: </span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">..</span> v)
+<span style="color:#f92672">&gt;&gt;</span>     <span style="color:#66d9ef">end</span>
+<span style="color:#f92672">&gt;&gt;</span> <span style="color:#66d9ef">end</span>
+<span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&gt;</span> print_table(book)
 auther: yjh
 title: My story
-pages: 100
-0: 1
-</code></pre>
-
-<p>pairs() 是内建函数，它是一个迭代器，可以与循环工作。</p>
-
-<h2 id="穿着数组外衣的字典">穿着数组外衣的字典</h2>
-
+pages: <span style="color:#ae81ff">100</span>
+<span style="color:#ae81ff">0</span>: <span style="color:#ae81ff">1</span>
+</code></pre></div><p>pairs() 是内建函数，它是一个迭代器，可以与循环工作。</p>
+<h2 id="heading-7">穿着数组外衣的字典</h2>
 <p>对于 Lua 来说，数组只是键值对存储结构的一个特例，键是连续的数字。</p>
-
-<pre><code class="language-lua">medals = {
-    &quot;gold&quot;,
-    &quot;silver&quot;,
-    &quot;bronze&quot;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua">medals <span style="color:#f92672">=</span> {
+    <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">gold</span><span style="color:#e6db74">&#34;</span>,
+    <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">silver</span><span style="color:#e6db74">&#34;</span>,
+    <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">bronze</span><span style="color:#e6db74">&#34;</span>
 }
 
-&gt; medals[1]
+<span style="color:#f92672">&gt;</span> medals[<span style="color:#ae81ff">1</span>]
 gold
-&gt; medals[4] = &quot;lead&quot;
-</code></pre>
-
-<p>Lua 运行时给数组提供了特殊的快车道，只要你连续用数字作为键向字典添加数据，Lua 就能高效地存储和访问数据。</p>
-
+<span style="color:#f92672">&gt;</span> medals[<span style="color:#ae81ff">4</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">lead</span><span style="color:#e6db74">&#34;</span>
+</code></pre></div><p>Lua 运行时给数组提供了特殊的快车道，只要你连续用数字作为键向字典添加数据，Lua 就能高效地存储和访问数据。</p>
 <h2 id="metatables">metatables</h2>
-
 <p>目前为止的table，如果你给定键，Lua给你找到一个值。这个逻辑是 Lua 内建的。
 有时候这种默认行为不是程序需要的。你可能需要返回一个默认值而不是nil；或者想把读写的历史记录到某个 table。这些可以通过 metatables 实现。</p>
-
 <p>如果你熟悉 JS 的原型或者 Python 的双下划线方法名，你会发现 Lua 的方式也很熟悉。
 Lua 的每个 table 都有一个 metatable，其中可以包含读写键值对的函数，可以包含用来遍历 table 内容的代码，也可以重载某些操作符。</p>
-
-<pre><code class="language-lua">&gt; greek_numbers = {
-&gt;&gt;     ena = &quot;one&quot;,
-&gt;&gt;     dyo = &quot;two&quot;,
-&gt;&gt;     tria = &quot;three&quot;
-&gt;&gt; }
-&gt;
-&gt; getmetatable(greek_numbers)
-nil
-</code></pre>
-
-<pre><code class="language-lua">function table_to_string(t)
-    local result = {}
-    for k, v in pairs(t) do
-        result[#result + 1] = k .. &quot;: &quot; .. v
-    end
-    return table.concat(result, &quot;\n&quot;)
-end
-</code></pre>
-
-<pre><code class="language-lua">&gt; mt = {
-&gt;&gt;     __tostring = table_to_string
-&gt;&gt; }
-&gt;
-&gt; setmetatable(greek_numbers, mt)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#f92672">&gt;</span> greek_numbers <span style="color:#f92672">=</span> {
+<span style="color:#f92672">&gt;&gt;</span>     ena <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">one</span><span style="color:#e6db74">&#34;</span>,
+<span style="color:#f92672">&gt;&gt;</span>     dyo <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">two</span><span style="color:#e6db74">&#34;</span>,
+<span style="color:#f92672">&gt;&gt;</span>     tria <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">three</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#f92672">&gt;&gt;</span> }
+<span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&gt;</span> getmetatable(greek_numbers)
+<span style="color:#66d9ef">nil</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">table_to_string</span>(t)
+    <span style="color:#66d9ef">local</span> result <span style="color:#f92672">=</span> {}
+    <span style="color:#66d9ef">for</span> k, v <span style="color:#66d9ef">in</span> pairs(t) <span style="color:#66d9ef">do</span>
+        result[<span style="color:#f92672">#</span>result <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> k <span style="color:#f92672">..</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">: </span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">..</span> v
+    <span style="color:#66d9ef">end</span>
+    <span style="color:#66d9ef">return</span> table.concat(result, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+<span style="color:#66d9ef">end</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#f92672">&gt;</span> mt <span style="color:#f92672">=</span> {
+<span style="color:#f92672">&gt;&gt;</span>     __tostring <span style="color:#f92672">=</span> table_to_string
+<span style="color:#f92672">&gt;&gt;</span> }
+<span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&gt;</span> setmetatable(greek_numbers, mt)
 dyo: two
 tria: three
 ena: one
-&gt; greek_numbers
+<span style="color:#f92672">&gt;</span> greek_numbers
 dyo: two
 tria: three
 ena: one
-</code></pre>
-
-<p>这样我们实现了自定义table输出为字符串的行为。</p>
-
-<h3 id="读和写">读和写</h3>
-
+</code></pre></div><p>这样我们实现了自定义table输出为字符串的行为。</p>
+<h3 id="heading-8">读和写</h3>
 <p>Lua 的 table 非常宽容，读取不存在的键只会得到一个 nil。如果需要更加严格的 table，读取不存在的键或者覆盖已经存在的键都会导致运行时错误。
-要做到这件事，只需要：
-- 把你想要自定义的读写逻辑写到两个函数里。
-- 把这两个函数存储到一个 table 中， 分别为 <code>__index</code> 和 <code>__newindex</code>。
-- 把上一步创建的 table 设置为你的数据 metatable。</p>
-
+要做到这件事，只需要：</p>
+<ul>
+<li>把你想要自定义的读写逻辑写到两个函数里。</li>
+<li>把这两个函数存储到一个 table 中， 分别为 <code>__index</code> 和 <code>__newindex</code>。</li>
+<li>把上一步创建的 table 设置为你的数据 metatable。</li>
+</ul>
 <p>下面依次进行这三步。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#66d9ef">local</span> _private <span style="color:#f92672">=</span> {}
 
-<pre><code class="language-lua">local _private = {}
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">strict_read</span>(table, key)
+    <span style="color:#66d9ef">if</span> _private[key] <span style="color:#66d9ef">then</span>
+        <span style="color:#66d9ef">return</span> _private[key]
+    <span style="color:#66d9ef">else</span>
+        error(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Invalid key: </span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">..</span> key)
+    <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
 
-function strict_read(table, key)
-    if _private[key] then
-        return _private[key]
-    else
-        error(&quot;Invalid key: &quot; .. key)
-    end
-end
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">strict_write</span>(table, key, value)
+    <span style="color:#66d9ef">if</span> _private[key] <span style="color:#66d9ef">then</span>
+        error(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Duplicate key: </span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">..</span> key)
+    <span style="color:#66d9ef">else</span>
+        _private[key] <span style="color:#f92672">=</span> value
+    <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
 
-function strict_write(table, key, value)
-    if _private[key] then
-        error(&quot;Duplicate key: &quot; .. key)
-    else
-        _private[key] = value
-    end
-end
-
-local mt = {
-    __index = strict_read,
-    __newindex = strict_write
+<span style="color:#66d9ef">local</span> mt <span style="color:#f92672">=</span> {
+    __index <span style="color:#f92672">=</span> strict_read,
+    __newindex <span style="color:#f92672">=</span> strict_write
 }
 
-treasure = {}
+treasure <span style="color:#f92672">=</span> {}
 
 setmetatable(treasure, mt)
-</code></pre>
-
-<p>现在你可以使用这个新自定义的字典了。</p>
-
-<pre><code class="language-lua">&gt; treasure.gold = 50
-&gt; treasure.gold
-50
-&gt; treasure.silver
-nil
-&gt; treasure.gold = 100
-&gt; treasure.gold
-100
-</code></pre>
-
-<p>除此之外，lua 还有其他特殊的键名，这种语法跟python非常类似。</p>
-
-<h2 id="自制面向对象系统">自制面向对象系统</h2>
-
+</code></pre></div><p>现在你可以使用这个新自定义的字典了。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#f92672">&gt;</span> treasure.gold <span style="color:#f92672">=</span> <span style="color:#ae81ff">50</span>
+<span style="color:#f92672">&gt;</span> treasure.gold
+<span style="color:#ae81ff">50</span>
+<span style="color:#f92672">&gt;</span> treasure.silver
+<span style="color:#66d9ef">nil</span>
+<span style="color:#f92672">&gt;</span> treasure.gold <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>
+<span style="color:#f92672">&gt;</span> treasure.gold
+<span style="color:#ae81ff">100</span>
+</code></pre></div><p>除此之外，lua 还有其他特殊的键名，这种语法跟python非常类似。</p>
+<h2 id="heading-9">自制面向对象系统</h2>
 <p>Lua 有自己的面向对象语法。不过得益于 lua 强大的抽象，可以容易地定义另一种面向对象风格，然后可以观察它们的区别。
 面向对象的核心观念就是对象之间互相发送消息。下面是一个玩家打 Boss 的代码的例子。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua">dietrich <span style="color:#f92672">=</span> {
+    name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Dietrich</span><span style="color:#e6db74">&#34;</span>,
+    health <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>,
 
-<pre><code class="language-lua">dietrich = {
-    name = &quot;Dietrich&quot;,
-    health = 100,
-
-    take_hit = function (self)
-        self.health = self.health - 10
-    end
+    take_hit <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (self)
+        self.health <span style="color:#f92672">=</span> self.health <span style="color:#f92672">-</span> <span style="color:#ae81ff">10</span>
+    <span style="color:#66d9ef">end</span>
 }
 
-&gt; dietrich.take_hit(dietrich)
-&gt; dietrich.health
-90
-</code></pre>
-
-<p>Boss 可能不止一个，如果 Boss 共用一份 take_init()，我需要知道让哪个 Boss 掉血，这就是传入 self 参数的目的。</p>
-
-<h3 id="原型">原型</h3>
-
-<pre><code class="language-lua">Villain = {
-    health = 100,
-    new = function(self, name)
-        local obj = {
-            name = name,
-            health = self.health
+<span style="color:#f92672">&gt;</span> dietrich.take_hit(dietrich)
+<span style="color:#f92672">&gt;</span> dietrich.health
+<span style="color:#ae81ff">90</span>
+</code></pre></div><p>Boss 可能不止一个，如果 Boss 共用一份 take_init()，我需要知道让哪个 Boss 掉血，这就是传入 self 参数的目的。</p>
+<h3 id="heading-10">原型</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua">Villain <span style="color:#f92672">=</span> {
+    health <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>,
+    new <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(self, name)
+        <span style="color:#66d9ef">local</span> obj <span style="color:#f92672">=</span> {
+            name <span style="color:#f92672">=</span> name,
+            health <span style="color:#f92672">=</span> self.health
         }
         
         setmetatable(obj, self)
-        self.__index = self
-        return obj    
-    end,
+        self.__index <span style="color:#f92672">=</span> self
+        <span style="color:#66d9ef">return</span> obj    
+    <span style="color:#66d9ef">end</span>,
 
-    take_hit = function(self)
-        self.health = self.health - 10
-    end
+    take_hit <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(self)
+        self.health <span style="color:#f92672">=</span> self.health <span style="color:#f92672">-</span> <span style="color:#ae81ff">10</span>
+    <span style="color:#66d9ef">end</span>
 }
 
-&gt; yjh = Villain.new(Villain, &quot;yjh&quot;)
-&gt; yjh.health
-100
-&gt; Villain.take_hit(yjh)
-&gt; yjh.health
-90
-</code></pre>
-
-<p>setmetable 把 obj 委托给了 self，这个例子中是 Villain，也是说把 Villain 作为查找的后备（这里原型继承应该跟 JS 类似，是原型链）。</p>
-
-<h3 id="继承">继承</h3>
-
+<span style="color:#f92672">&gt;</span> yjh <span style="color:#f92672">=</span> Villain.new(Villain, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">yjh</span><span style="color:#e6db74">&#34;</span>)
+<span style="color:#f92672">&gt;</span> yjh.health
+<span style="color:#ae81ff">100</span>
+<span style="color:#f92672">&gt;</span> Villain.take_hit(yjh)
+<span style="color:#f92672">&gt;</span> yjh.health
+<span style="color:#ae81ff">90</span>
+</code></pre></div><p>setmetable 把 obj 委托给了 self，这个例子中是 Villain，也是说把 Villain 作为查找的后备（这里原型继承应该跟 JS 类似，是原型链）。</p>
+<h3 id="heading-11">继承</h3>
 <p>如上所说，基于原型的面向对象系统的一个好处是不需要特殊的机制来实现继承，可以像之前那样定制，复制对象就可以了。
 如果你需要创建一个 Final Boss，你只需要创建一个新的原型，然后复制它就好了。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#75715e">-- 定制新的 Boss 类</span>
+SuperVillain <span style="color:#f92672">=</span> Villain.new(Villain)
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">SuperVillain</span>.<span style="color:#a6e22e">take_hit</span>(self)
+    self.health <span style="color:#f92672">=</span> self.health <span style="color:#f92672">-</span> <span style="color:#ae81ff">5</span>
+<span style="color:#66d9ef">end</span>
 
-<pre><code class="language-lua">-- 定制新的 Boss 类
-SuperVillain = Villain.new(Villain)
-function SuperVillain.take_hit(self)
-    self.health = self.health - 5
-end
-
--- 实例化
-&gt; boss = SuperVillain.new(SuperVillain, &quot;Final Boss&quot;)
-&gt; boss.take_hit(boss)
-&gt; boss.health
-95
-</code></pre>
-
-<h3 id="语法糖">语法糖</h3>
-
+<span style="color:#75715e">-- 实例化</span>
+<span style="color:#f92672">&gt;</span> boss <span style="color:#f92672">=</span> SuperVillain.new(SuperVillain, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Final Boss</span><span style="color:#e6db74">&#34;</span>)
+<span style="color:#f92672">&gt;</span> boss.take_hit(boss)
+<span style="color:#f92672">&gt;</span> boss.health
+<span style="color:#ae81ff">95</span>
+</code></pre></div><h3 id="heading-12">语法糖</h3>
 <p>如果你写的是 table:method() 而不是 table.method(self), Lua 会隐式传入 self 参数。</p>
-
-<pre><code class="language-lua">-- same as before
-Villain = {
-    health = 100
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#75715e">-- same as before</span>
+Villain <span style="color:#f92672">=</span> {
+    health <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>
 }
 
-function Villain:new(name)
-    local obj = {
-        name = name,
-        health = self.health
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Villain</span>:<span style="color:#a6e22e">new</span>(name)
+    <span style="color:#66d9ef">local</span> obj <span style="color:#f92672">=</span> {
+        name <span style="color:#f92672">=</span> name,
+        health <span style="color:#f92672">=</span> self.health
     }
     
     setmetatable(obj, self)
-    self.__index = self
-    return obj    
-end
+    self.__index <span style="color:#f92672">=</span> self
+    <span style="color:#66d9ef">return</span> obj    
+<span style="color:#66d9ef">end</span>
 
-function Villain:take_hit()
-    self.health = self.health - 10  
-end
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Villain</span>:<span style="color:#a6e22e">take_hit</span>()
+    self.health <span style="color:#f92672">=</span> self.health <span style="color:#f92672">-</span> <span style="color:#ae81ff">10</span>  
+<span style="color:#66d9ef">end</span>
 
-&gt; yjh = Villain:new(&quot;yjh&quot;)
-&gt; yjh:take_hit()
-&gt; yjh.health
-90
-</code></pre>
-
-<h2 id="协程">协程</h2>
-
+<span style="color:#f92672">&gt;</span> yjh <span style="color:#f92672">=</span> Villain:new(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">yjh</span><span style="color:#e6db74">&#34;</span>)
+<span style="color:#f92672">&gt;</span> yjh:take_hit()
+<span style="color:#f92672">&gt;</span> yjh.health
+<span style="color:#ae81ff">90</span>
+</code></pre></div><h2 id="heading-13">协程</h2>
 <p>之前的 Lua 代码都是串行执行的。那么 Lua 如何处理多线程？ Lua 不处理多线程。
 但是 Lua 内建了简单、容易理解的用于多任务处理的基本类型：<code>协程</code>。
 与线程不同，协程不是抢占式的，你需要显式标注哪里暂停任务，让位给其他任务。它在概念上更简单，可以免去许多并行的问题。</p>
-
 <p>下面定义一个死循环。</p>
-
-<pre><code class="language-lua">function fibonacii()
-    local m = 1
-    local n = 1
-    while true do
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">fibonacii</span>()
+    <span style="color:#66d9ef">local</span> m <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">local</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">true</span> <span style="color:#66d9ef">do</span>
         coroutine.yield(m)
-        m, n = n , m + n
-    end
-end
+        m, n <span style="color:#f92672">=</span> n , m <span style="color:#f92672">+</span> n
+    <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
 
-&gt; gen = coroutine.create(fibonacii)
-&gt; succeeded, value = coroutine.resume(gen)
-&gt; value
-1
-&gt; succeeded, value = coroutine.resume(gen)
-&gt; value
-1
-&gt; succeeded, value = coroutine.resume(gen)
-&gt; value
-2
-</code></pre>
-
-<p>要运行协程需要先用 coroutine.create 函数创建一个协程，然后调用 couroutine.resume。调用 resume 后就执行该函数直到遇见下一个 yield 调用就跳回调用者处，并且返回一个<code>状态码</code>和 <code>yield 的参数</code>。
+<span style="color:#f92672">&gt;</span> gen <span style="color:#f92672">=</span> coroutine.create(fibonacii)
+<span style="color:#f92672">&gt;</span> succeeded, value <span style="color:#f92672">=</span> coroutine.resume(gen)
+<span style="color:#f92672">&gt;</span> value
+<span style="color:#ae81ff">1</span>
+<span style="color:#f92672">&gt;</span> succeeded, value <span style="color:#f92672">=</span> coroutine.resume(gen)
+<span style="color:#f92672">&gt;</span> value
+<span style="color:#ae81ff">1</span>
+<span style="color:#f92672">&gt;</span> succeeded, value <span style="color:#f92672">=</span> coroutine.resume(gen)
+<span style="color:#f92672">&gt;</span> value
+<span style="color:#ae81ff">2</span>
+</code></pre></div><p>要运行协程需要先用 coroutine.create 函数创建一个协程，然后调用 couroutine.resume。调用 resume 后就执行该函数直到遇见下一个 yield 调用就跳回调用者处，并且返回一个<code>状态码</code>和 <code>yield 的参数</code>。
 这种方式适合耗时长的计算或者网络操作，可以把它分解为较小的子任务来执行，维持程序的响应性。</p>
-
-<h2 id="多任务">多任务</h2>
-
+<h2 id="heading-14">多任务</h2>
 <p>协程虽然简单但功能强大，可以实现类似多线程的行为。操作系统的<code>进程调度器</code>通常需要几千行代码，不过我们可以使用几十行来实现一个。</p>
-
 <p>先定义 scheduler.lua 。<em>注意：</em> 局部函数必须先定义后使用。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#66d9ef">local</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sort_by_time</span>(array)
+    table.sort(array, <span style="color:#66d9ef">function</span>(e1, e2) <span style="color:#66d9ef">return</span> e1.time <span style="color:#f92672">&lt;</span> e2.time <span style="color:#66d9ef">end</span>)
+<span style="color:#66d9ef">end</span>
 
-<pre><code class="language-lua">local function sort_by_time(array)
-    table.sort(array, function(e1, e2) return e1.time &lt; e2.time end)
-end
+<span style="color:#66d9ef">local</span> pending <span style="color:#f92672">=</span> {}
 
-local pending = {}
-
-local function schedule(time, action)
-    pending [#pending + 1] = {
-        time = time,
-        action = action
+<span style="color:#66d9ef">local</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">schedule</span>(time, action)
+    pending [<span style="color:#f92672">#</span>pending <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> {
+        time <span style="color:#f92672">=</span> time,
+        action <span style="color:#f92672">=</span> action
     }
 
     sort_by_time(pending)
-end
-</code></pre>
-
-<p>想让某件事在未来发生的话，把它丢到 pending 数组里，该数组以时间戳排序（程序启动到现在的秒数）。</p>
-
-<pre><code class="language-lua">local function wait(seconds)
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>想让某件事在未来发生的话，把它丢到 pending 数组里，该数组以时间戳排序（程序启动到现在的秒数）。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#66d9ef">local</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">wait</span>(seconds)
     coroutine.yield(seconds)
-    -- seconds will be sent to coroutine.resume's return.
-end
-</code></pre>
+    <span style="color:#75715e">-- seconds will be sent to coroutine.resume&#39;s return.</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>协程一个是轻量级的。在开始运行（run）以后后就做相应的处理，做完马上返回或者 yield。所以 wait 函数不应该真的等待，而是向调度器 yield。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#66d9ef">local</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">remove_first</span>(array)
+    result <span style="color:#f92672">=</span> array[<span style="color:#ae81ff">1</span>]
+    array [<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> array[<span style="color:#f92672">#</span>array]
+    array[<span style="color:#f92672">#</span>array] <span style="color:#f92672">=</span> <span style="color:#66d9ef">nil</span>
+    <span style="color:#66d9ef">return</span> result
+<span style="color:#66d9ef">end</span>
 
-<p>协程一个是轻量级的。在开始运行（run）以后后就做相应的处理，做完马上返回或者 yield。所以 wait 函数不应该真的等待，而是向调度器 yield。</p>
+<span style="color:#66d9ef">local</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">run</span>()
+    <span style="color:#75715e">-- when there is not task, the scheduler will quit.</span>
+    <span style="color:#66d9ef">while</span> <span style="color:#f92672">#</span>pending <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">do</span>
+        <span style="color:#66d9ef">while</span> os.clock() <span style="color:#f92672">&lt;</span> pending[<span style="color:#ae81ff">1</span>].time <span style="color:#66d9ef">do</span> 
+        <span style="color:#66d9ef">end</span> <span style="color:#75715e">-- busy-wait</span>
 
-<pre><code class="language-lua">local function remove_first(array)
-    result = array[1]
-    array [1] = array[#array]
-    array[#array] = nil
-    return result
-end
-
-local function run()
-    -- when there is not task, the scheduler will quit.
-    while #pending &gt; 0 do
-        while os.clock() &lt; pending[1].time do 
-        end -- busy-wait
-
-        local item = remove_first(pending)
-        local _, seconds = coroutine.resume(item.action)
-        -- got seconds from coroutine.yield.
-        if seconds then
-            later = os.clock() + seconds
-            -- item's next action time -- `now` plus `schedule time`            
-            -- print('later:' .. later)
+        <span style="color:#66d9ef">local</span> item <span style="color:#f92672">=</span> remove_first(pending)
+        <span style="color:#66d9ef">local</span> _, seconds <span style="color:#f92672">=</span> coroutine.resume(item.action)
+        <span style="color:#75715e">-- got seconds from coroutine.yield.</span>
+        <span style="color:#66d9ef">if</span> seconds <span style="color:#66d9ef">then</span>
+            later <span style="color:#f92672">=</span> os.clock() <span style="color:#f92672">+</span> seconds
+            <span style="color:#75715e">-- item&#39;s next action time -- `now` plus `schedule time`            </span>
+            <span style="color:#75715e">-- print(&#39;later:&#39; .. later)</span>
             schedule(later, item.action)
-        end
-    end
-end
-</code></pre>
-
-<p>run 会在没有任务时等待（任务时间还未到达），在有任务时执行任务。如果执行的任务调度 wait, 任务执行所需要消耗的秒数就会被 yield 给我们。
+        <span style="color:#66d9ef">end</span>
+    <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>run 会在没有任务时等待（任务时间还未到达），在有任务时执行任务。如果执行的任务调度 wait, 任务执行所需要消耗的秒数就会被 yield 给我们。
 我们会用这个秒数决定未来什么时候继续执行当前的任务（因为协程是非抢占的，所以调度以后，可能其他任务花费 wait 给定时间的数倍才让回来，这里需要程序员自己来设计好调度时机）。</p>
-
 <p>当任务执行完毕后，协程不会 yield 任何东西。 这时候 resume 函数会返回 nil，我们也不会给该任务分配任何时间了。</p>
-
 <p>最后我们把这个 API 封装成一个模块。下面代码仍然写到 scheduler.lua里。</p>
-
-<pre><code class="language-lua">return {
-    schedule = schedule,
-    run = run,
-    wait = wait
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#66d9ef">return</span> {
+    schedule <span style="color:#f92672">=</span> schedule,
+    run <span style="color:#f92672">=</span> run,
+    wait <span style="color:#f92672">=</span> wait
 }
-</code></pre>
+</code></pre></div><p>现在可以执行一个新文件了。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#75715e">-- main.lua</span>
+scheduler <span style="color:#f92672">=</span> require <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">scheduler</span><span style="color:#e6db74">&#39;</span>
 
-<p>现在可以执行一个新文件了。</p>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">punch</span>()
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span> <span style="color:#66d9ef">do</span>
+        print(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">punch </span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">..</span> i)
+        scheduler.wait(<span style="color:#ae81ff">0.3</span>)
+    <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
 
-<pre><code class="language-lua">-- main.lua
-scheduler = require 'scheduler'
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">block</span>()
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span> <span style="color:#66d9ef">do</span>
+        print(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">block </span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">..</span> i)
+        scheduler.wait(<span style="color:#ae81ff">1.0</span>)
+    <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
 
-function punch()
-    for i = 1, 5 do
-        print('punch ' .. i)
-        scheduler.wait(0.3)
-    end
-end
-
-function block()
-    for i = 1, 3 do
-        print('block ' .. i)
-        scheduler.wait(1.0)
-    end
-end
-
-scheduler.schedule(0, coroutine.create(punch))
-scheduler.schedule(0, coroutine.create(block))
+scheduler.schedule(<span style="color:#ae81ff">0</span>, coroutine.create(punch))
+scheduler.schedule(<span style="color:#ae81ff">0</span>, coroutine.create(block))
 scheduler.run()
-</code></pre>
-
-<p>我们使用 require 函数来加载模块：
-- 检查模块是否已经加载过。
-- 搜索多个程序库的加载路径（可以配置）。
-- 给局部变量提供安全的命名空间。</p>
-
+</code></pre></div><p>我们使用 require 函数来加载模块：</p>
+<ul>
+<li>检查模块是否已经加载过。</li>
+<li>搜索多个程序库的加载路径（可以配置）。</li>
+<li>给局部变量提供安全的命名空间。</li>
+</ul>
 <pre><code>$ ./lua53.exe main.lua
 punch 1
 block 1
@@ -788,10 +659,7 @@ punch 4
 block 2
 punch 5
 block 3
-</code></pre>
-
-<h2 id="总结">总结</h2>
-
+</code></pre><h2 id="heading-15">总结</h2>
 <p>我们实现了一个面向对象系统以及一个类似线程的并行 API，并且这些代码写得可读、紧凑、模块化。
 让这一切容易实现得益于 Lua 易于组合的数据结构：table 和 协程。table 可以作为数组和字典使用，lua 还给我们提供了切入点来扩展 table 的行为。
 之后我们学习了协程，这是 Lua 并行的方式。尽管协程 API 不多，但是仍然可以构造复杂强大的多任务系统。</p>
@@ -800,7 +668,7 @@ block 3
 </main>
 
         <footer>
-            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
         </footer>
 
         

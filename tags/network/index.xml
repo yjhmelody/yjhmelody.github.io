@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Network on MY LIFE</title>
@@ -31,7 +31,7 @@
 802.11标准要求每个AP周期性地发送信标帧（beacon frame），每个信标帧包括该AP的SSID和MAC地址。 你的无线站点为了得知正在发送信标帧的AP，扫描11个信道，找到可能来着可能位于该区域的AP所发出的信标帧。
 不过，802.11标准没有指定选择哪个可用的AP进行关联的算法，这个由802.11固件和无线主机的软件设计者来设计。 比如，主机选择接收到的具有最高信号强度的信标帧，但可能过载。
 这里扫描分两种：
- 被动扫描（passive scanning），自AP发送信标帧，无线站点*扫描信道*和*监听信标帧*，然后向选择的AP发送*关联请求帧*，最后AP响应关联响应帧 主动扫描（active scanning），无线站点广播*探测请求帧*，AP发送*探测响应*，然后无线站点选择AP发送*关联请求帧*，最后AP响应关联响应帧  鉴别与接入 为了与特定的AP创建关联，某无线站点可能需要向该AP鉴别它自身。
+ 被动扫描（passive scanning），自AP发送信标帧，无线站点扫描信道和监听信标帧，然后向选择的AP发送关联请求帧，最后AP响应关联响应帧 主动扫描（active scanning），无线站点广播探测请求帧，AP发送探测响应，然后无线站点选择AP发送关联请求帧，最后AP响应关联响应帧  鉴别与接入 为了与特定的AP创建关联，某无线站点可能需要向该AP鉴别它自身。
 802.11 提供了几种不同的鉴别和接入方法
  基于站点的MAC地址允许其接入网络 基于用户名和口令  上述两种情况下，可能使用的RADIUS（基于UDP）和DIAMETER（最初作为RADIUS的改良）这样的协议。</description>
     </item>

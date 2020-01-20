@@ -70,7 +70,7 @@
 
 
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.58.2" />
+ <meta name="generator" content="Hugo 0.61.0" />
         
 
         
@@ -139,36 +139,25 @@
 
     </div>
 
-    <div align="start" class="content">
-
-<h1 id="机器学习里的一些小概念">机器学习里的一些小概念</h1>
-
-<h2 id="轮廓系数">轮廓系数</h2>
-
+    <div align="start" class="content"><h1 id="heading">机器学习里的一些小概念</h1>
+<h2 id="heading-1">轮廓系数</h2>
 <p>轮廓系数（Silhouette Coefficient），是聚类效果好坏的一种评价方式。最早由 Peter J. Rousseeuw 在 1986 提出。
 它结合内聚度和分离度两种因素。可以用来在相同原始数据的基础上用来评价不同算法、或者算法不同运行方式对聚类结果所产生的影响。</p>
-
-<h3 id="计算过程">计算过程</h3>
-
+<h3 id="heading-2">计算过程</h3>
 <p>假设我们已经通过一定算法，将待分类数据进行了聚类。
 常用的比如使用K-means，将待分类数据分为了k个簇。
 对于簇中的每个向量。分别计算它们的轮廓系数。
 对于其中的一个点 i 来说：</p>
-
 <ul>
 <li>计算 a(i) = average(i向量到所有它属于的簇中其它点的距离)</li>
 <li>计算 b(i) = min(i向量到所有其他簇的点的平均距离)</li>
 </ul>
-
 <p>那么i向量轮廓系数就为：
 {% raw %}
 $$ S(i) = \frac{b(i) - a(i)}{max{a(i), b(i)}} $$
 {% endraw %}</p>
-
-<h3 id="判断">判断</h3>
-
+<h3 id="heading-3">判断</h3>
 <p>可见轮廓系数的值是介于 [-1,1] ，越趋近于1代表内聚度和分离度都相对较优。将所有点的轮廓系数求平均，就是该聚类结果总的轮廓系数。</p>
-
 <ul>
 <li>a(i) ：i向量到同一簇内其他点不相似程度的平均值</li>
 <li>b(i) ：i向量到其他簇的平均不相似程度的最小值</li>
@@ -176,14 +165,13 @@ $$ S(i) = \frac{b(i) - a(i)}{max{a(i), b(i)}} $$
 <li>S(i)接近-1，则说明样本i更应该分类到另外的簇；</li>
 <li>若S(i)近似为0，则说明样本i在两个簇的边界上。</li>
 </ul>
-
-<h2 id="未完待续">未完待续</h2>
+<h2 id="heading-4">未完待续</h2>
 </div>
 
 </main>
 
         <footer>
-            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
         </footer>
 
         
